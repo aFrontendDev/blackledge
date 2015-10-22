@@ -1,0 +1,121 @@
+[
+	{
+		"class": "content-card-style-a",
+		"blockSize": "c",
+		"media": {
+			"class": "content-card-media-style-a",
+			"img": {
+				"src": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			}
+		},
+		"title": "<code>.content-card</code>",
+		"subtitle": "<code>.content-card-style-a</code>",
+		"bodyCopy": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto a maxime expedita veniam tempore labore quas ipsa, totam eveniet.</p>",
+		"cta": {
+			"class": "btn btn-style-a",
+			"url": "#",
+			"text": "call to action"
+		}
+	},
+	{
+		"class": "content-card-style-b",
+		"blockSize": "c",
+		"media": {
+			"class": "content-card-media-style-b",
+			"img": {
+				"src": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			}
+		},
+		"title": "<code>.content-card</code>",
+		"subtitle": "<code>.content-card-style-b</code>",
+		"bodyCopy": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto a maxime expedita veniam tempore labore quas ipsa, totam eveniet.</p>",
+		"cta": {
+			"class": "btn btn-style-b",
+			"url": "#",
+			"text": "longer call to action"
+		}
+	},
+	{
+		"class": "content-card-style-c",
+		"blockSize": "c",
+		"media": {
+			"class": "content-card-media-style-c",
+			"img": {
+				"src": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			}
+		},
+		"title": "<code>.content-card</code>",
+		"subtitle": "<code>.content-card-style-c</code>",
+		"bodyCopy": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto a maxime expedita veniam tempore labore quas ipsa, totam eveniet.</p>",
+		"cta": {
+			"class": "btn btn-style-c",
+			"url": "#",
+			"text": "loooooong call to action button"
+		}
+	},
+	{
+		"class": "content-card-style-d",
+		"blockSize": "c",
+		"media": {
+			"class": "content-card-media-style-d",
+			"img": {
+				"src": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			}
+		},
+		"title": "<code>.content-card</code>",
+		"subtitle": "<code>.content-card-style-d</code>",
+		"bodyCopy": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto a maxime expedita veniam tempore labore quas ipsa, totam eveniet.</p>",
+		"cta": {
+			"class": "btn btn-small btn-style-d",
+			"url": "#",
+			"text": "call to action"
+		}
+	},
+	{
+		"class": "content-card-style-e",
+		"blockSize": "c",
+		"media": {
+			"class": "content-card-media-style-e",
+			"img": {
+				"src": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			}
+		},
+		"title": "<code>.content-card</code>",
+		"subtitle": "<code>.content-card-style-e</code>",
+		"bodyCopy": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit aliquam soluta provident, nemo architecto eligendi amet illo ab, magnam perspiciatis atque voluptas, dicta veritatis a possimus ut rem. Minima, excepturi.</p>",
+		"cta": {
+			"class": "btn btn-large btn-style-e",
+			"url": "#",
+			"text": "call to action"
+		}
+	},
+	{
+		"class": "content-card-style-f",
+		"blockSize": "c",
+		"media": {
+			"class": "content-card-media-style-f",
+			"img": {
+				"src": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			}
+		},
+		"title": "<code>.content-card</code>",
+		"subtitle": "<code>.content-card-style-f</code>",
+		"bodyCopy": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto a maxime expedita veniam tempore labore quas ipsa, totam eveniet.</p>",
+		"cta": {
+			"url": "#",
+			"text": "call to action"
+		}
+	}
+]

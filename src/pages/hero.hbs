@@ -1,0 +1,64 @@
+---
+title: Hero demo page
+---
+
+{{#extend "layout-a"}}
+	{{#content "sections-top"}}
+		<div class="layout layout-a">
+			<div class="region region-a">
+				<div class="region-inner">
+					<h1 class="title-stylesheet">Hero</h1>
+					<h2 class="subtitle-stylesheet">Hero example <small><code>.hero.hero-style-*</code></small></h2>
+				</div>
+			</div>
+		</div>
+		{{#each hero.hero-standard}}
+			{{>hero}}
+		{{/each}}
+	{{/content}}
+
+	{{#content "region-a"}}
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+			<pre class="codeblock-stylesheet" contenteditable>
+				<code>
+{
+	"overlay": true,
+	"class": "hero-style-a",
+	"title": "&lt;code&gt;Title&lt;/code&gt;",
+	"subtitle": "&lt;code&gt;Subtitle&lt;/code&gt;",
+	"body": "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;"
+}</code>
+			</pre>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">These heros:</h3>
+			<ul>
+				<li>only have base styles attached to them</li>
+				<li>have <strong>optional</strong> <em>themes</em> - fun fact: these are randomised each build for the purpose of this framework!</li>
+				<li>go in <code>{​{"sections-top"}}</code>, making them full width</li>
+			</ul>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|  |- styles/
+|      |- components/
+|        |- hero.less
+|- data/
+|-  |- hero.json
+|- pages/
+|  |- hero.hbs
+|- partials/
+|  |- hero/
+|      |- hero.hbs
+				</code>
+			</pre>
+		</div>
+	{{/content}}
+{{/extend}}

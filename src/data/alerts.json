@@ -1,0 +1,25 @@
+[
+	{
+		"alertType": "alert-success",
+		"timeout": "5",
+		"title": "Success!",
+		"body": "<p><code>.alert-success</code></p>"
+	},
+	{
+		"alertType": "alert-notice",
+		"timeout": "6",
+		"title": "Please Note&hellip;",
+		"body": "<p><code>.alert-notice</code></p>"
+	},
+	{
+		"alertType": "alert-warning",
+		"timeout": "10",
+		"title": "Warning!",
+		"body": "<p><code>.alert-warning</code></p>"
+	},
+	{
+		"alertType": "alert-error",
+		"title": "Sorry, there was an error&hellip;",
+		"body": "<p><code>.alert-error</code></p>"
+	}
+]

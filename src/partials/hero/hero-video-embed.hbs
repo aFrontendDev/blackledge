@@ -1,0 +1,50 @@
+{{#if video.youtube}}
+<div class="hero hero-video-embed hero-video-youtube{{#if video.class}} {{{video.class}}}{{/if}}" data-youtube-id="{{{video.videoId}}}">
+{{/if}}
+
+{{#if video.vimeo}}
+<div class="hero hero-video-embed hero-video-vimeo{{#if video.class}} {{{video.class}}}{{/if}}" data-vimeo-id="{{{video.videoId}}}" {{#if video.autoplay}} data-vimeo-options="?byline=0&autoplay=true"{{/if}}>
+{{/if}}
+	<div class="hero-video-poster {{#if video.hero}}hero-image{{/if}}">
+		{{#if video.image.small}}
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<!-- 61.25em = 1024px -->
+			<source media="(min-width: 61.25em)" srcset="{{{video.image.large}}}">
+			<!-- 37.5em = 600px -->
+			<source media="(min-width: 37.5em)" srcset="{{{video.image.medium}}}">
+			<!--[if IE 9]></video><![endif]-->
+			<!--[if lt IE 9]><img srcset="{{{video.image.large}}}" alt="{{{video.image.alt}}}" /><![endif]-->
+			<!--[if !lt IE 9]><!-->
+			<img srcset="{{{video.image.small}}}" alt="{{{video.image.alt}}}">
+			<!--<![endif]-->
+		</picture>
+		{{else}}
+		<img src="{{{video.image.large}}}" alt="{{{video.image.alt}}}">
+		{{/if}}
+	</div>
+
+	{{#if video.youtube}}
+	<div class="hero-video-icons">
+		<a href="//youtube.com/embed/{{{video.videoId}}}" class="hero-video-icon hero-video-icon-play hero-video-play">
+		 	<i class="icon icon-play"><span>play video</span></i>
+		</a>
+		<a href="//youtube.com/embed/{{{video.videoId}}}" class="hero-video-icon hero-video-icon-pause hero-video-pause">
+		 	<i class="icon icon-pause"><span>pause video</span></i>
+		</a>
+	</div>
+	{{/if}}
+
+	<div class="hero-video-player">
+		{{#if video.youtube}}
+		<div class="hero-video-replace" id="{{{video.videoId}}}_youtube-video-{{{video.videoId}}}" >
+			<a href="//youtube.com/embed/{{{video.videoId}}}">Watch on Youtube</a>
+		</div>
+		{{/if}}
+		{{#if video.vimeo}}
+			<div class="hero-video-replace" id="video_vimeo_{{{video.videoId}}}" >
+				<a href="//vimeo.com/{{{video.videoId}}}">Watch {{{video.videoId}}} on Vimeo</a>
+			</div>
+		{{/if}}
+	</div>
+</div>

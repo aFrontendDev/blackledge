@@ -1,0 +1,18 @@
+<div class="hero hero-image">
+	{{#if image.small}}
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<!-- 61.25em = 1024px -->
+			<source media="(min-width: 61.25em)" srcset="{{{image.large}}}">
+			<!-- 37.5em = 600px -->
+			<source media="(min-width: 37.5em)" srcset="{{{image.medium}}}">
+			<!--[if IE 9]></video><![endif]-->
+			<!--[if lt IE 9]><img srcset="{{{image.large}}}" alt="{{{image.alt}}}"{{#if image.longdesc}} longdesc="{{{image.longdesc}}}"{{/if}}/><![endif]-->
+			<!--[if !lt IE 9]><!-->
+			<img srcset="{{{image.small}}}" alt="{{{image.alt}}}"{{#if image.longdesc}} longdesc="{{{image.longdesc}}}"{{/if}}/>
+			<!--<![endif]-->
+		</picture>
+	{{else}}
+		<img src="{{{image.large}}}" alt="{{{image.alt}}}"{{#if image.longdesc}} longdesc="{{{image.longdesc}}}"{{/if}}/>
+	{{/if}}
+</div>

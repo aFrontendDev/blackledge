@@ -1,0 +1,84 @@
+---
+title: Hero video demo page
+visibleBreakpoints: true
+---
+
+{{#extend "layout-a"}}
+	{{#content "sections-top"}}
+		<div class="layout layout-a">
+			<div class="region region-a">
+				<div class="region-inner">
+					<h1 class="title-stylesheet">Hero with video</h1>
+					<h2 class="subtitle-stylesheet">Hero video example <small><code>.hero.hero-video-background</code></small></h2>
+				</div>
+			</div>
+		</div>
+		{{#each hero.hero-video-background}}
+			{{>hero-video-background}}
+		{{/each}}
+	{{/content}}
+
+	{{#content "region-a"}}
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+			<pre class="codeblock-stylesheet" contenteditable>
+				<code>
+{
+	"video": {
+		"autoplay": true,
+		"controls": false,
+		"fallbackImage": "images/1600x900.png",
+		"loop": true,
+		"metadata": {
+			"duration": "2:11",
+			"thumbnail": "images/1600x900.png",
+			"transcript": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+		},
+		"overlay": false,
+		"preload": true,
+		"srcs": [{
+				"src": "video/BB_Ambient.webm",
+				"type": "video/webm"
+			},
+			{
+				"src": "video/BB_Ambient.mp4",
+				"type": "video/mp4"
+			}],
+		"transcriptExternal": "transcript_file.vtt"
+	}
+}</code>
+			</pre>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">This video hero:</h3>
+			<ul>
+				<li>only has base styles attached to it</li>
+				<li>goes in <code>{​{"sections-top"}}</code>, making it full width</li>
+				<li>has <strong>optional</strong> <em>autoplay/controls/loop/overlay/preload</em></li>
+				<li>has <strong>optional</strong> metadata for accessibility</li>
+				<li>has <strong>optional</strong> transcript file for accessibility</li>
+			</ul>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|  |- styles/
+|      |- components/
+|        |- hero.less
+|- data/
+|-  |- hero.json
+|- pages/
+|  |- hero.hbs
+|- partials/
+|  |- hero/
+|      |- hero-video.hbs
+				</code>
+			</pre>
+		</div>
+	{{/content}}
+{{/extend}}

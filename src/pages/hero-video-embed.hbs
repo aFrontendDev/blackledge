@@ -1,0 +1,149 @@
+---
+title: Hero video embed demo page
+visibleBreakpoints: true
+includeTota11y: true
+---
+
+{{#extend "layout-a"}}
+	{{#content "sections-top"}}
+		<div class="layout layout-a">
+			<div class="region region-a">
+				<div class="region-inner">
+					<h1 class="title-stylesheet">Hero with video embed</h1>
+					<h2 class="subtitle-stylesheet">Hero video embed example (YouTube) <small><code>.hero.hero-video-embed</code></small></h2>
+				</div>
+			</div>
+		</div>
+
+		{{>hero-video-embed hero.hero-video-embed.[0]}}
+	{{/content}}
+
+	{{#content "region-a"}}
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+			<pre class="codeblock-stylesheet" contenteditable>
+				<code>
+{
+	"video": {
+		"id": "hero-video-embed-a",
+		"image": {
+			"small": "temp/1400x600.gif",
+			"medium": "temp/1400x600.gif",
+			"large": "temp/1600x900.png"
+		},
+		"linkText": "Watch on YouTube",
+		"youtube": true,
+		"videoId": "1SUzcDUERLo"
+	}
+}</code>
+			</pre>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">This YouTube video embed hero:</h3>
+			<ul>
+				<li>only has base styles attached to it</li>
+				<li>goes in <code>{​{"sections-top"}}</code>, making it full width</li>
+				<li>have <strong>optional</strong> <em>media for responsive images</em></li>
+				<li>needs custom play/pause icons adding to the button</li>
+			</ul>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|- |- scripts/
+|- |- |- videosYoutube.js
+|  |- styles/
+|      |- components/
+|        |- hero.less
+|- data/
+|-  |- hero.json
+|- pages/
+|  |- hero.hbs
+|- partials/
+|  |- hero/
+|      |- hero-video-embed.hbs
+				</code>
+			</pre>
+		</div>
+
+		<h1 class="title-stylesheet">Hero with video embed</h1>
+		<h2 class="subtitle-stylesheet">Hero video embed example (Vimeo) <small><code>.hero.hero-video-embed</code></small></h2>
+	{{/content}}
+
+	{{#content "features-bottom"}}
+		{{>hero-video-embed hero.hero-video-embed.[1]}}
+
+		<div class="layout layout-a">
+			<div class="region region-a">
+				<div class="region-inner">
+					<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+					<pre class="codeblock-stylesheet" contenteditable>
+						<code>
+{
+	"video": {
+		"autoplay": false,
+		"id": "hero-video-embed-b",
+		"image": {
+			"small": "temp/1400x600.gif",
+			"medium": "temp/1400x600.gif",
+			"large": "temp/1600x900.png"
+		},
+		"linkText": "Watch on Vimeo",
+		"videoId": "139567362",
+		"vimeo": true
+	}
+}</code>
+					</pre>
+
+					<h2 class="subtitle-stylesheet">Implementation information</h2>
+					<h3 class="beta">This Vimeo video embed hero:</h3>
+					<ul>
+						<li>only has base styles attached to it</li>
+						<li>goes in <code>{​{"sections-top"}}</code>, making it full width</li>
+						<li>have <strong>optional</strong> <em>media for responsive images</em></li>
+						<li>has a customisable <code>autoplay</code> attribute</li>
+					</ul>
+
+					<h3 class="beta">The relevant files:</h3>
+					<pre>
+						<code>
+src/
+|
+|- assets/
+|- |- scripts/
+|- |- |- videosResponsive.js
+|- |- |- videosVimeo.js
+|  |- styles/
+|      |- components/
+|        |- hero.less
+|- data/
+|-  |- hero.json
+|- pages/
+|  |- hero.hbs
+|- partials/
+|  |- hero/
+|      |- hero-video-embed.hbs</code>
+					</pre>
+					<p>As well as 3rd party assets from <code>bower_components</code>, added during the JavaScript build:</p>
+					<pre>
+						<code>
+concat: {
+	scripts: {
+		src: [
+			'&lt;%= config.bower %&gt;/fitvids/jquery.fitvids.js'
+		]
+	}
+}</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{/content}}
+{{/extend}}

@@ -1,0 +1,107 @@
+---
+title: Carousel demo page
+---
+
+{{#extend "layout-a"}}
+	{{#content "sections-top"}}
+	{{/content}}
+
+	{{#content "region-a"}}
+		<div class="block block-size-a">
+			<h1 class="title-stylesheet">Carousel</h1>
+			<h2 class="subtitle-stylesheet">Carousel example <code>(owl)</code> <small><code>.carousel.owl-carousel</code></small></h2>
+			{{>carousel-owl carousel.[0]}}
+
+			<h2 class="subtitle-stylesheet">Carousel example <code>(owl)</code> <small><code>.carousel.owl-carousel</code></small></h2>
+			{{>carousel-owl carousel.[1]}}
+		</div>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+			<pre class="codeblock-stylesheet" contenteditable>
+				<code>
+{
+	"class": "carousel-style-a",
+	"dots": true,
+	"items": "1",
+	"images": [
+		{
+			"small": "temp/1600x900.png",
+			"medium": "temp/1600x900.png",
+			"large": "temp/1600x900.png",
+			"alt": "Alternate text describing the image",
+			"longdesc": "www.w3.org/TR/html-longdesc/"
+		},
+		{
+			"small": "temp/1600x900.png",
+			"medium": "temp/1600x900.png",
+			"large": "temp/1600x900.png",
+			"alt": "Alternate text describing the image",
+			"longdesc": "www.w3.org/TR/html-longdesc/"
+		},
+		{
+			"small": "temp/1600x900.png",
+			"medium": "temp/1600x900.png",
+			"large": "temp/1600x900.png",
+			"alt": "Alternate text describing the image",
+			"longdesc": "www.w3.org/TR/html-longdesc/"
+		}
+	],
+	"nav": true
+}</code>
+			</pre>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">These carousels:</h3>
+			<ul>
+				<li>only have base styles attached to them</li>
+				<li>have configurable <em>media</em></li>
+				<li>are sized by their parent’s block size</li>
+				<li>can override the plugin’s default options via data attributes on the markup eg: <code>data-items="1"</code></li>
+			</ul>
+
+			<p>The carousel uses 3rd party plugin <code>owl-carousel</code> . Documentation for this plugin can be found at <a href="http://owlcarousel.owlgraphic.com" rel="external" target="_blank">http://owlcarousel.owlgraphic.com</a>.</p>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|  |- scripts/
+|    |- modules/
+|        |- carousel.js
+|  |- styles/
+|      |- components/
+|        |- carousel.less
+|      |- vendor/
+|        |- owl-carousel.less
+|- data/
+|-  |- carousel.json
+|- pages/
+|  |- carousel.hbs
+|- partials/
+|  |- carousel/
+|      |- carousel-owl.hbs
+				</code>
+			</pre>
+			<p>As well as 3rd party assets from <code>bower_components</code>, added during the JavaScript build:</p>
+			<pre>
+				<code>
+concat: {
+	scripts: {
+		src: [
+			'&lt;%= config.bower %&gt;/OwlCarousel/src/js/owl.carousel.js',
+			'&lt;%= config.bower %&gt;/OwlCarousel/src/js/owl.autoplay.js',
+			'&lt;%= config.bower %&gt;/OwlCarousel/src/js/owl.navigation.js',
+			'&lt;%= config.bower %&gt;/OwlCarousel/src/js/owl.lazyload.js'
+		]
+	}
+}
+				</code>
+			</pre>
+		</div>
+	{{/content}}
+{{/extend}}

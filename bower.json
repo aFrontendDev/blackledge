@@ -1,0 +1,54 @@
+{
+  "name": "blackledge",
+  "version": "1.0.0",
+  "description": "Generic, reusable front end component framework.",
+  "homepage": "https://github.com/furzeface/blackledge",
+  "issues": "https://github.com/furzeface/blackledge/issues",
+  "authors": [
+    "Daniel Furze (https://github.com/furzeface)",
+    "Andrew 'The Ledge' Blackledge (https://github.com/ablackledge)"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules"
+  ],
+  "devDependencies": {
+    "console-polyfill": "~0.1.2",
+    "jquery": "1.11.1",
+    "jquery-tiny-pubsub": "~0.7.0",
+    "modernizr": "~2.8.2",
+    "normalize-less": "*",
+    "nwmatcher": "~1.3.1",
+    "selectivizr": "~1.0.2",
+    "OwlCarousel": "https://github.com/smashingboxes/OwlCarousel2.git",
+    "picturefill": "~2.3.1",
+    "jquery-smartresize": "*",
+    "conformity": "~0.2.3",
+    "fitvids": "~1.1.0"
+  },
+  "preen": {
+    "console-polyfill": [
+      "*.js"
+    ],
+    "jquery": [
+      "dist/*.{js,map}"
+    ],
+    "jquery-tiny-pubsub": [
+      "dist/*.min.js"
+    ],
+    "modernizr": [
+      "modernizr.js"
+    ],
+    "normalize-less": [
+      "normalize.less"
+    ],
+    "nwmatcher": [
+      "src/nwmatcher.js"
+    ],
+    "selectivizr": [
+      "selectivizr.js"
+    ]
+  }
+}

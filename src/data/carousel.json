@@ -1,0 +1,57 @@
+[
+	{
+		"class": "carousel-style-a",
+		"dots": true,
+		"items": "1",
+		"images": [
+			{
+				"small": "temp/1600x900.png",
+				"medium": "temp/1600x900.png",
+				"large": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			},
+			{
+				"small": "temp/1600x900.png",
+				"medium": "temp/1600x900.png",
+				"large": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			},
+			{
+				"small": "temp/1600x900.png",
+				"medium": "temp/1600x900.png",
+				"large": "temp/deified_800x450.jpg",
+				"alt": "DEIFIED!"
+			}
+		],
+		"nav": true
+	},
+	{
+		"class": "carousel-style-a",
+		"items": "3",
+		"images": [
+			{
+				"small": "temp/1600x900.png",
+				"medium": "temp/1600x900.png",
+				"large": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			},
+			{
+				"small": "temp/1600x900.png",
+				"medium": "temp/1600x900.png",
+				"large": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			},
+			{
+				"small": "temp/1600x900.png",
+				"medium": "temp/1600x900.png",
+				"large": "temp/1600x900.png",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			}
+		]
+	}
+]

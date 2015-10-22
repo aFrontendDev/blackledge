@@ -1,0 +1,28 @@
+<div class="hero hero-video-background{{#if video.overlay}} hero-with-overlay{{/if}}{{#if video.fallbackImage}} hero-with-fallback{{/if}}"{{#if video.poster}} poster="{{{video.poster}}}"{{/if}}{{#if video.metadata}} itemprop="video" itemscope itemtype="http://schema.org/VideoObject"{{/if}}>
+	<video{{#if video.preload}} preload="auto"{{/if}}{{#if video.loop}} loop{{/if}}{{#if video.autoplay}} autoplay{{/if}}{{#if video.controls}} controls{{/if}}>
+		{{#each video.srcs}}
+			<source src="{{{this.src}}}" type="{{{this.type}}}">
+		{{/each}}
+		{{#if transcriptExternal}}
+			 <track src="{{{transcriptExternal}}}" label="English captions" kind="captions" srclang="en-us" default>
+		{{/if}}
+	</video>
+
+	{{#if video.fallbackImage}}
+		<img src="{{{video.fallbackImage}}}" alt="" class="hero-video-poster">
+	{{/if}}
+
+	{{!-- See http://schema.org/VideoObject --}}
+	{{#if video.metadata.duration}}<meta itemprop="duration" content="{{{video.metadata.duration}}}" />{{/if}}
+	{{#if video.metadata.thumbnail}}<meta itemprop="thumbnail" content="{{{video.metadata.thumbnail}}}" />{{/if}}
+	{{#if video.metadata.transcript}}<span itemprop="transcript">{{{video.metadata.transcript}}}</span>{{/if}}
+
+	{{#if video.body}}
+		<div class="hero-body">
+			<h1 class="giga"><code>.hero</code></h1>
+			<h2 class="mega"><code>.hero-video-background</code></h2>
+			<p>Ambient background video with body copy.</p>
+			<a href="#" class="btn btn-style-a">call to action</a>
+		</div>
+	{{/if}}
+</div>

@@ -1,0 +1,28 @@
+// overlay.less
+
+.overlay-in {
+	// <html>
+
+	body {
+		backface-visibility: hidden;
+		overflow: hidden;
+	}
+}
+
+.overlay {
+	.size(100%);
+
+	background-color: rgba(0,0,0,0.8);
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all @modal-speed/2;
+	visibility: hidden;
+	z-index: 1000;
+
+	.overlay-in & {
+		opacity: 1;
+		visibility: visible;
+	}
+}

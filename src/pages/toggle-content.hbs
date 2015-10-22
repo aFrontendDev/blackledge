@@ -1,0 +1,52 @@
+---
+title: Modals demo page
+---
+
+{{#extend "layout-a"}}
+	{{#content "region-a"}}
+		<div class="block block-size-a">
+			<h1 class="title-stylesheet">Toggle Content</h1>
+
+			<h2 class="subtitle-stylesheet">Toggle content example <small><code>.toggle</code></small></h2>
+
+			{{>toggle}}
+		</div>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">Toggle content markup example:</h3>
+<pre>
+	<code>
+&lt;div class=&quot;toggle&quot;&gt;
+  &lt;div class=&quot;toggle-body&quot;&gt;
+    &lt;a href=&quot;#toggle_content&quot; class=&quot;toggle-handle&quot;&gt; Toggle Handle &lt;/a&gt;
+    &lt;div class=&quot;toggle-content&quot; id=&quot;toggle_content&quot;&gt;
+      &lt;h4&gt;Toggle content&lt;/h4&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|  |- scripts/
+|    |- modules/
+|        |- toggleContent.js
+|  |- styles/
+|      |- components/
+|        |- toggle-content.less
+|- pages/
+|  |- toggle.hbs
+|- partials/
+|  |- toggle/
+|      |- toggle.hbs
+				</code>
+			</pre>
+		</div>
+	{{/content}}
+{{/extend}}

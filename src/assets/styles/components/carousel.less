@@ -1,0 +1,87 @@
+// Carousel
+
+.carousel {
+	margin-bottom: @ggw;
+}
+
+// customisation of the owl carousel plugin
+
+@nav-icon-size: 20px;
+
+.owl-nav {
+	.vertically-centered;
+
+	height: 20px;
+	text-align: center;
+	width: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.owl-prev,
+.owl-next {
+	.size(@nav-icon-size);
+
+	cursor: pointer;
+	font-size: @nav-icon-size;
+	position: absolute;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.owl-prev {
+	left: @nav-icon-size;
+}
+
+.owl-next {
+	right: @nav-icon-size;
+}
+
+.owl-dots {
+	position: absolute;
+    bottom: 0;
+	text-align: center;
+    width: 100%;
+}
+
+.owl-dot {
+	display: inline-block;
+
+	span {
+		backface-visibility: visible;
+		border: 2px solid @color-text;
+		border-radius: 50%;
+		display: block;
+		height: 16px;
+		margin: 5px;
+		position: relative;
+		transition: opacity, 200ms, ease-in-out;
+		width: 16px;
+
+		&::after {
+			.size(6px);
+
+			background: @color-text;
+			border-radius: 50%;
+			content: '';
+			display: block;
+			opacity: 0;
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			transform: scale(0);
+			transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+		}
+	}
+
+	&.active,
+	&:hover {
+		span {
+			&::after {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+	}
+}

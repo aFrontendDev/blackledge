@@ -1,0 +1,106 @@
+{
+	"hero-standard": [
+		{
+			"overlay": true,
+			"class": "hero-style-a",
+			"title": "<code>.hero</code>",
+			"subtitle": "<code>.hero-style-a.hero-with-overlay</code>",
+			"body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus laborum at optio modi sint labore vitae odit officia possimus. Facere odio laboriosam hic laudantium similique quod inventore veritatis eius rerum.</p>"
+		},
+		{
+			"class": "hero-style-b",
+			"title": "<code>.hero</code>",
+			"subtitle": "<code>.hero-style-b</code>",
+			"body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus laborum at optio modi sint labore vitae odit officia possimus. Facere odio laboriosam hic laudantium similique quod inventore veritatis eius rerum.</p>"
+		},
+		{
+			"overlay": true,
+			"class": "hero-style-c",
+			"title": "<code>.hero</code>",
+			"subtitle": "<code>.hero-style-c.hero-with-overlay</code>",
+			"body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus laborum at optio modi sint labore vitae odit officia possimus. Facere odio laboriosam hic laudantium similique quod inventore veritatis eius rerum.</p>"
+		},
+		{
+			"class": "hero-style-d",
+			"title": "<code>.hero</code>",
+			"subtitle": "<code>.hero-style-d</code>",
+			"body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus laborum at optio modi sint labore vitae odit officia possimus. Facere odio laboriosam hic laudantium similique quod inventore veritatis eius rerum.</p>"
+		}
+	],
+	"hero-image": [
+		{
+			"image": {
+				"small": "temp/640x640.gif",
+				"medium": "temp/750x750.gif",
+				"large": "temp/1400x600.gif",
+				"alt": "Alternate text describing the image",
+				"longdesc": "www.w3.org/TR/html-longdesc/"
+			}
+		},
+		{
+			"image": {
+				"large": "temp/1400x600.gif",
+				"alt": "Alternate text describing the image"
+			}
+		}
+	],
+	"hero-video-background": [
+		{
+			"video": {
+				"autoplay": true,
+				"body": true,
+				"controls": false,
+				"fallbackImage": "temp/1600x900.png",
+				"loop": true,
+				"metadata": {
+					"duration": "2:11",
+					"thumbnail": "temp/1600x900.png",
+					"transcript": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus pariatur alias reprehenderit repellendus aperiam cum, autem inventore natus nesciunt fugiat nemo quidem excepturi nulla, ipsum, dolorem similique velit exercitationem tempora."
+				},
+				"poster": "temp/1600x900.png",
+				"preload": true,
+				"srcs": [
+					{
+						"src": "video/BB_Ambient.webm",
+						"type": "video/webm"
+					},
+					{
+						"src": "video/BB_Ambient.mp4",
+						"type": "video/mp4"
+					}
+				],
+				"transcriptExternal": "transcript_file.vtt"
+			}
+		}
+	],
+	"hero-video-embed": [
+		{
+			"video": {
+				"id": "hero-video-embed-a",
+				"image": {
+					"small": "temp/1400x600.gif",
+					"medium": "temp/1400x600.gif",
+					"large": "temp/1600x900.png"
+				},
+				"linkText": "Watch on YouTube",
+				"youtube": true,
+				"videoId": "1SUzcDUERLo"
+			}
+		},
+		{
+			"video": {
+				"autoplay": false,
+				"id": "hero-video-embed-b",
+				"image": {
+					"small": "temp/1400x600.gif",
+					"medium": "temp/1400x600.gif",
+					"large": "temp/1600x900.png"
+				},
+				"linkText": "Watch on Vimeo",
+				"videoId": "17853140",
+				"vimeo": true
+			}
+		}
+	]
+}
+

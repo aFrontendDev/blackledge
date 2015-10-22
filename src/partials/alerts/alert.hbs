@@ -1,0 +1,17 @@
+<div class="alert-container">
+	<section class="alert {{{alertType}}}" {{#if timeout}}data-timeout="{{{timeout}}}"{{/if}}>
+		<div class="alert-inner">
+			{{#if title}}
+		    <header class="alert-header">
+				<h4 class="alert-title">{{{title}}}</h4>
+				<button class="alert-dismiss" title="Close Alert"><i class="icon icon-close"></i></button>
+			</header>
+			{{/if}}
+			{{#if body}}
+		    <div class="alert-content">
+		        {{{body}}}
+		    </div>
+		    {{/if}}
+		</div>
+	</section>
+</div>

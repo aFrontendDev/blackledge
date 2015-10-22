@@ -1,0 +1,29 @@
+<article class="content-card {{#if class}} {{{class}}}{{/if}} {{#if blockSize}} block block-size-{{{blockSize}}}{{/if}}">
+	{{#if media}}
+	<figure class="content-card-media{{#if class}} {{{class}}}{{/if}}">
+		<img src="{{{media.img.src}}}" alt="{{{media.img.alt}}}" {{#if media.img.longdesc}} longdesc="{{{media.img.longdesc}}}"{{/if}}/>
+	</figure>
+	{{/if}}
+
+	<div class="content-card-body">
+		{{#if title}}
+			<h1>{{{title}}}</h1>
+		{{/if}}
+
+		{{#if subtitle}}
+		<h2>{{{subtitle}}}</h2>
+		{{/if}}
+
+		{{#if bodyCopy}}
+				{{{bodyCopy}}}
+		{{/if}}
+
+		{{#if cta}}
+			<footer class="content-card-footer">
+				<a href="{{{cta.url}}}" class="content-card-cta {{#if cta.class}} {{{cta.class}}}{{/if}}">
+					{{{cta.text}}}
+				</a>
+			</footer>
+		{{/if}}
+	</div>
+</article>

@@ -1,0 +1,63 @@
+// Toggle
+
+// toggle.less
+
+.toggle-out {
+	display: none;
+}
+
+.toggle-off-text {
+	display: inline;
+
+	.toggle-in & {
+		display: none;
+	}
+}
+
+.toggle-in-text {
+	display: none;
+
+	.toggle-in & {
+		display: inline;
+	}
+}
+
+// Toggle icons / labels
+.toggle-icon-opened,
+.toggle-label-opened {
+	display: none;
+
+	.toggle-in & {
+		display: inline-block;
+	}
+}
+
+.toggle-icon-closed,
+.toggle-label-closed {
+	display: inline-block;
+
+	.toggle-in & {
+		display: none;
+	}
+}
+
+.toggle-content {
+
+	.js & {
+		display: none;
+	}
+
+	.toggle-in & {
+		display: block;
+	}
+
+	.toggle-smallscreen & {
+		@media @BPD {
+			display: block;
+		}
+	}
+}
+
+.toggle-body {
+	position: relative;
+}

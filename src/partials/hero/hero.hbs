@@ -1,0 +1,9 @@
+<div class="hero{{#if class}} {{{class}}}{{/if}}{{#if overlay}} hero-with-overlay{{/if}} clearfix">
+	{{#if body}}
+		<div class="hero-body">
+			{{#if title}}<h1>{{{title}}}</h1>{{/if}}
+			{{#if subtitle}}<h2>{{{subtitle}}}</h2>{{/if}}
+			{{{body}}}
+		</div>
+	{{/if}}
+</div>

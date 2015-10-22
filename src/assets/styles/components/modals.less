@@ -1,0 +1,255 @@
+// modals
+
+@modal-speed: 400ms;
+@modal-padding-x: 20px;
+
+@keyframes flip-in {
+	0% {
+		opacity: 0;
+		transform: rotateY(-89deg) scale(0.6);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotateY(0deg) scale(1);
+	}
+}
+
+@keyframes flip-out {
+	0% {
+		opacity: 1;
+		transform: rotateY(0deg) scale(1);
+	}
+	50% {
+		transform: rotateY(-89deg) scale(0.6);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+// Special case for animation in Firefox
+@keyframes flip-in-ff {
+	0% {
+		opacity: 0;
+		transform: rotateY(-89deg);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes flip-out-ff {
+	0% {
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+	50% {
+		transform: rotateY(-89deg);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+.modal-in {
+	// <html>
+
+	body {
+		backface-visibility: hidden;
+		overflow: hidden;
+	}
+}
+
+.modal-container {
+	.js & {
+		opacity: 0;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+
+	.modal-show & {
+		opacity: 1;
+		visibility: visible;
+		z-index: 1001;
+	}
+
+	.modal-in & {
+		overflow-y: scroll;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		height: 101%;
+	}
+}
+
+.modal-container-inner {
+	backface-visibility: hidden;
+	perspective: 1000px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	@media @BPF {
+		left: 50%;
+		right: auto;
+		transform: translateX(-50%);
+		width: 100%;
+	}
+
+	.modal-in & {
+		&:before {
+			content: '';
+		}
+	}
+}
+
+.modal {
+	margin: 0 -@ggw-smallscreen @vr*4;
+	position: relative;
+	width: 50%; // for dev purposes - theme according to your needs
+	z-index: 2;
+
+	@media @BPD {
+		margin: 0 auto @vr*4;
+	}
+
+	.modal-container & {
+		margin: 0 -@ggw-smallscreen @vr*4;
+		max-height: 500px;  // keep a decent perspective on flip
+		overflow: visible;
+
+		@media @BPD {
+			max-height: 800px; // keep a decent perspective on flip
+		}
+
+		@media @BPF {
+			margin: 0 auto @vr*4;
+			padding: @vr*10 0;
+		}
+	}
+
+	.modal-container & {
+		opacity: 0;
+		margin: 0 auto;
+	}
+
+	.modal-in .modal-container &,
+	.modal-out .modal-container & {
+		backface-visibility: hidden;
+		animation-fill-mode: forwards;
+		animation-duration: @modal-speed;
+		transform: rotateY(-89deg) scale(0.6);
+		transform-style: preserve-3d;
+
+		.firefox& {
+			animation-fill-mode: none;
+			transform: none;
+			transform-style: unset;
+		}
+	}
+
+	.modal-in .modal-container & {
+		animation-name: flip-in;
+		opacity: 1;
+
+		.firefox& {
+			animation-name: flip-in-ff;
+		}
+	}
+
+	.modal-out .modal-container & {
+		animation-name: flip-out;
+
+		.firefox& {
+			animation-name: flip-out-ff;
+		}
+	}
+}
+
+.modal-inner {
+	padding-bottom: @vr*3;
+	position: relative;
+	margin: 10px;
+
+	@media @BPF {
+		margin: 0;
+		left: -10px;
+		padding-bottom: @vr*6;
+	}
+}
+
+.modal-close {
+	.reset-button;
+
+	color: #FFF;
+	display: none;
+	font-size: @font-size-base;
+	overflow: hidden;
+	line-height: @ggw;
+	padding: 0;
+	position: absolute;
+	top: -@ggw*2;
+	right: 0;
+	width: 40px;
+	z-index: 3;
+
+	.modal-container & {
+		display: block;
+	}
+
+	@media @BPF {
+		font-size: @font-size-base*2;
+		top: -@ggw*2;
+		right: 0;
+	}
+
+	b {
+		.visually-hidden;
+	}
+}
+
+.modal-header {
+	.randomColor();
+	background: @color; // for dev purposes - theme according to your needs
+
+	color: #FFF;
+	position: relative;
+	padding: @vr*3 40px @vr*3 @ggw-smallscreen;
+	z-index: 2;
+
+	@media @BPF {
+		padding: @vr*5 @ggw;
+	}
+
+	.modal-title {
+		font-weight: @font-weight-bold;
+		margin: 0;
+	}
+}
+
+.modal-body {
+	background: #FFF;
+	overflow: hidden;
+	padding: @vr*3 @ggw-smallscreen 0;
+	position: relative;
+	z-index: 2;
+
+	@media @BPF {
+		padding: @vr*4 @modal-padding-x 0;
+	}
+}

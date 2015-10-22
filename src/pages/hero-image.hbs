@@ -1,0 +1,81 @@
+---
+title: Hero image demo page
+---
+
+{{#extend "layout-a"}}
+	{{#content "sections-top"}}
+		<div class="layout layout-a">
+			<div class="region region-a">
+				<div class="region-inner">
+					<h1 class="title-stylesheet">Hero with image <small>(responsive)</small></h1>
+					<h2 class="subtitle-stylesheet">Hero image example <small><code>.hero.hero-image</code></small></h2>
+				</div>
+			</div>
+		</div>
+		{{>hero-image hero.hero-image.[0]}}
+
+		<div class="layout layout-a">
+			<div class="region region-a">
+				<div class="region-inner">
+					<h1 class="title-stylesheet">Hero with image</h1>
+					<h2 class="subtitle-stylesheet">Hero image example <small><code>.hero.hero-image</code></small></h2>
+				</div>
+			</div>
+		</div>
+		{{>hero-image hero.hero-image.[1]}}
+	{{/content}}
+
+	{{#content "region-a"}}
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+			<pre class="codeblock-stylesheet" contenteditable>
+				<code>
+{
+	"image": {
+		"small": "temp/640x640.gif",
+		"medium": "temp/750x750.gif",
+		"large": "temp/1400x600.gif",
+		"alt": "Alternate text describing the image",
+		"longdesc": "www.w3.org/TR/html-longdesc/"
+	}
+},
+{
+	"image": {
+		"large": "temp/1400x600.gif",
+		"alt": "Alternate text describing the image"
+	}
+}
+				</code>
+			</pre>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">These image heros:</h3>
+			<ul>
+				<li>only have base styles attached to them</li>
+				<li>have <strong>optional</strong> <em>media for responsive images</em></li>
+				<li>go in <code>{​{"sections-top"}}</code>, making them full width</li>
+			</ul>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|  |- styles/
+|      |- components/
+|        |- hero.less
+|- data/
+|-  |- hero.json
+|- pages/
+|  |- hero.hbs
+|- partials/
+|  |- hero/
+|      |- hero-image.hbs
+				</code>
+			</pre>
+		</div>
+	{{/content}}
+{{/extend}}

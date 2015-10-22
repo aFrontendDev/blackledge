@@ -1,0 +1,73 @@
+---
+title: Alerts demo page
+---
+
+{{#extend "layout-a"}}
+	{{#content "sections-top"}}
+	{{/content}}
+
+	{{#content "region-a"}}
+		<div class="block block-size-a">
+			<h1 class="title-stylesheet">Alerts</h1>
+
+			<h2 class="subtitle-stylesheet">Alerts example <small><code>.alert.alert-style-*</code></small></h2>
+			<p><em>(Alerts are shown at the bottom of the page)</em></p>
+				<div class="alerts">
+					<div class="alerts-inner">
+						{{#each alerts}}
+							{{>alert}}
+						{{/each}}
+					</div>
+				</div>
+		</div>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+			<pre class="codeblock-stylesheet" contenteditable>
+				<code>
+{
+	"alertType": "alert-success",
+	"timeout": "5",
+	"title": "Title",
+	"body": "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;"
+},
+{
+	"alertType": "alert-notice",
+	"title": "Title",
+	"body": "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;"
+}</code>
+			</pre>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">These alerts:</h3>
+			<ul>
+				<li>only have base styles attached to them</li>
+				<li>have configurable <em>theme/timeout/title/body</em></li>
+			</ul>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|  |- scripts/
+|    |- modules/
+|        |- alerts.js
+|  |- styles/
+|      |- components/
+|        |- alerts.less
+|- data/
+|-  |- alerts.json
+|- pages/
+|  |- alerts.hbs
+|- partials/
+|  |- alerts/
+|      |- alert.hbs
+				</code>
+			</pre>
+		</div>
+	{{/content}}
+{{/extend}}

@@ -1,0 +1,67 @@
+---
+title: Modals demo page
+---
+
+{{#extend "layout-a"}}
+	{{#content "sections-top"}}
+	{{/content}}
+
+	{{#content "region-a"}}
+		<div class="block block-size-a">
+			<h1 class="title-stylesheet">Modals</h1>
+
+			<h2 class="subtitle-stylesheet">Modals example <small><code>.modal</code></small></h2>
+			<a href="/modal-example.html" data-modal="true">
+				Modal AJAX test link
+			</a>
+		</div>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+			<pre class="codeblock-stylesheet" contenteditable>
+				<code>
+{
+	"class": "modal-style-a",
+	"title": "Modal title",
+	"body": "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum consectetur odio unde recusandae magnam.&lt;/p&gt;"
+}</code>
+			</pre>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">This modal:</h3>
+			<ul>
+				<li>performs an AJAX request to the href of the link when <code>data-modal="true"</code></li>
+				<li>appends the modal content to the page after retrieving</li>
+				<li>only has base styles attached to it</li>
+				<li>have configurable <em>theme/title/body</em></li>
+			</ul>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|  |- scripts/
+|    |- modules/
+|        |- lockScroll.js
+|        |- modal.js
+|        |- overlay.js
+|  |- styles/
+|      |- components/
+|        |- modals.less
+|        |- overlay.less
+|- data/
+|-  |- modal.json
+|- pages/
+|  |- modals.hbs
+|- partials/
+|  |- modals/
+|      |- modal.hbs
+				</code>
+			</pre>
+		</div>
+	{{/content}}
+{{/extend}}

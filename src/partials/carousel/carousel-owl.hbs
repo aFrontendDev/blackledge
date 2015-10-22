@@ -1,0 +1,25 @@
+<div class="carousel owl-carousel{{#if class}} {{{class}}}{{/if}}"{{#if items}} data-items="{{{items}}}"{{/if}}{{#if nav}} data-nav="true"{{/if}}{{#if dots}} data-dots="true"{{/if}}>
+	{{#each images}}
+		<div class="item">
+			<picture>
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<!-- 61.25em = 1024px -->
+				<source media="(min-width: 61.25em)" srcset="{{{large}}}">
+				{{#if small}}
+				<!-- 37.5em = 600px -->
+				<source media="(min-width: 37.5em)" srcset="{{{medium}}}">
+				{{/if}}
+				<!--[if IE 9]></video><![endif]-->
+				<!--[if lt IE 9]><img srcset="{{large}}" alt="{{{alt}}}"{{#if longdesc}} longdesc="{{{longdesc}}}"{{/if}}/><![endif]-->
+				<!--[if !lt IE 9]><!-->
+				{{#unless small}}
+					<img srcset="{{{medium}}}" alt="{{{alt}}}"{{#if longdesc}} longdesc="{{{longdesc}}}"{{/if}}/>
+				{{/unless}}
+				{{#if small}}
+					<img srcset="{{{small}}}" alt="{{{alt}}}"{{#if longdesc}} longdesc="{{{longdesc}}}"{{/if}}/>
+				{{/if}}
+				<!--<![endif]-->
+			</picture>
+		</div>
+	{{/each}}
+</div>

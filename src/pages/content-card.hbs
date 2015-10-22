@@ -1,0 +1,91 @@
+---
+title: Content card demo page
+---
+
+{{#extend "layout-a"}}
+	{{#content "region-a"}}
+
+		<div class="block block-size-a">
+			<h1 class="title-stylesheet">Content cards</h1>
+
+			<h2 class="subtitle-stylesheet">Card examples <small><code>.content-card</code></small></h2>
+			{{#each content-cards}}
+				{{>content-card}}
+			{{/each}}
+		</div>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">JSON structure example</h2>
+
+			<pre class="codeblock-stylesheet" contenteditable>
+				<code>
+{
+	"class": "content-card-style-a",
+	"blockSize": "c",
+	"media": {
+		"class": "content-card-media-style-a",
+		"img": {
+			"src": "temp/1600x900.png",
+			"alt": "Alternate text describing the image",
+			"longdesc": "www.w3.org/TR/html-longdesc/"
+		}
+	},
+	"title": "title",
+	"subtitle": "subtitle",
+	"bodyCopy": "&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;",
+	"cta": {
+		"class": "btn btn-style-a",
+		"url": "#",
+		"text": "call to action"
+	}
+}</code>
+			</pre>
+
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">These content cards:</h3>
+			<ul>
+				<li>only have base styles attached to them</li>
+				<li>have optional <em>media/title/subtitle/body copy/cta</em></li>
+				<li>can be given any standard block size</li>
+				<li>can be given different themes</li>
+			</ul>
+			<p>The content cards use 3rd party plugin <code>conformity</code> to set equal heights per row. Documentation for this plugin can be found at <a href="https://github.com/codekipple/conformity" rel="external" target="_blank">https://github.com/codekipple/conformity</a>.</p>
+			<p>The resize event uses 3rd party plugin <code>smartresize</code> to throttle the event, improving performance. Documentation for this plugin can be found at <a href="https://github.com/louisremi/jquery-smartresize">https://github.com/louisremi/jquery-smartresize</a>.</p>
+
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+src/
+|
+|- assets/
+|  |- scripts/
+|    |- modules/
+|        |- contentCard.js
+|  |- styles/
+|      |- components/
+|        |- content-card.less
+|- data/
+|-  |- content-cards.json
+|- pages/
+|  |- content-card.hbs
+|- partials/
+|  |- content-card/
+|      |- content-card.hbs</code>
+			</pre>
+
+			<p>As well as 3rd party assets from <code>bower_components</code>, added during the JavaScript build:</p>
+			<pre>
+				<code>
+concat: {
+	scripts: {
+		src: [
+			'&lt;%= config.bower %&gt;/conformity/dist/conformity.min.js',
+			'&lt;%= config.bower %&gt;/jquery-smartresize/jquery.throttledresize.js',
+		]
+	}
+}</code>
+			</pre>
+		</div>
+	{{/content}}
+{{/extend}}
