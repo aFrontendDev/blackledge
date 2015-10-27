@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/furzeface/blackledge.png?label=ready&title=Ready)](https://waffle.io/furzeface/blackledge)
 # Component Framework 
 
 > Generic, reusable front-end component framework.
