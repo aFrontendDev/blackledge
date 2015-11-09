@@ -19,7 +19,7 @@ git push --set-upstream origin feature/MY-FEATURE
 Then [Git Flow](http://nvie.com/posts/a-successful-git-branching-model).
 
 ### Issues
-On [Waffle board](https://badge.waffle.io/furzeface/blackledge).
+On [Waffle board](https://waffle.io/furzeface/blackledge).
 
 [![Stories in Ready](https://badge.waffle.io/furzeface/blackledge.png?label=ready&title=Ready)](https://waffle.io/furzeface/blackledge)
 
