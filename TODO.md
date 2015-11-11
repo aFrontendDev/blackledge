@@ -1,0 +1,26 @@
+# TODO
+
+- [Spike out Gulp version](https://github.com/furzeface/blackledge/issues/9)
+	- load tasks
+	- time tasks
+	- watch
+	- connect
+	- assemble
+	- [jsbeautifier](https://github.com/beautify-web/js-beautify)
+	- jshint
+	- concat
+	- uglify
+	- less
+	- **sass**
+	- stripmq
+	- px_to_rem
+	- autoprefixer
+	- combine_mq
+	- cssmin
+	- csscomb
+	- [csslint](https://www.npmjs.com/package/gulp-csslint)
+	- [modernizr](https://www.npmjs.com/package/gulp-modernizr)
+	- [copy](https://www.npmjs.com/package/gulp-copy)
+	- clean - maybe [rimraf](https://github.com/isaacs/rimraf) or [del](https://www.npmjs.com/package/del) instead
+	- [prettify](https://www.npmjs.com/package/gulp-prettify)
+	- **testing tasks**

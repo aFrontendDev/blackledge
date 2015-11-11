@@ -31,5 +31,5 @@ node_modules
 dist
 test/results
 FRONTEND.md
-TODO.md
+# TODO.md
 _combined.less
