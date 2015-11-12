@@ -54,9 +54,8 @@ var bb = bb ? bb : {};
 				self.$carousels.each(function() {
 					var $carousel = $(this);
 
-					// carousel options
+					// carousel options // @todo loop through data attrs to push into this config obj
 					var options = {
-						dots: true, // @todo configure this
 						dotsSpeed: self.speed,
 						nav: self.nav,
 						navSpeed: self.speed,
