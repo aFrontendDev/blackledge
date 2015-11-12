@@ -15,10 +15,10 @@ var bb = bb ? bb : {};
 			// CSS selectors
 			carouselSelector: '.carousel',
 			// Configuration
-			autoplay: true,
+			autoplay: false,
 			dots: false,
 			items: 1,
-			loop: true,
+			loop: false,
 			nav: false,
 			navText: [
 				'<i class="icon icon-arrow-left"></i>',
@@ -56,10 +56,8 @@ var bb = bb ? bb : {};
 
 					// carousel options
 					var options = {
-						autoplay: self.autoplay,
 						dots: true, // @todo configure this
 						dotsSpeed: self.speed,
-						loop: self.loop,
 						nav: self.nav,
 						navSpeed: self.speed,
 						navText: self.navText
@@ -69,6 +67,8 @@ var bb = bb ? bb : {};
 					options['dots'] = ($carousel.data('dots')) ? $carousel.data('dots') : self.dots;
 					options['items'] = ($carousel.data('items')) ? $carousel.data('items') : self.items;
 					options['nav'] = ($carousel.data('nav')) ? $carousel.data('nav') : self.nav;
+					options['autoplay'] = ($carousel.data('autoplay')) ? $carousel.data('autoplay') : self.autoplay;
+					options['loop'] = ($carousel.data('loop')) ? $carousel.data('loop') : self.loop;
 					// use any more data attributes to configure this way from the component’s markup
 
 					$carousel.owlCarousel(options);

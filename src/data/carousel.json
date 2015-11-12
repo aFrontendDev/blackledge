@@ -25,9 +25,11 @@
 				"alt": "DEIFIED!"
 			}
 		],
+		"loop": true,
 		"nav": true
 	},
 	{
+		"autoplay": true,
 		"class": "carousel-style-a",
 		"items": "3",
 		"images": [
