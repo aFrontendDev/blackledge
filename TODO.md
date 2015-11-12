@@ -10,14 +10,15 @@
 	- jshint
 	- concat
 	- uglify
-	- less
-	- **sass**
-	- stripmq
-	- px_to_rem
-	- autoprefixer
-	- combine_mq
-	- cssmin
-	- csscomb
+	- [less](https://github.com/plus3network/gulp-less)
+	- [**sass**](https://www.npmjs.com/package/gulp-sass)
+	- [**postcss**](https://www.npmjs.com/package/postcss)
+	- [stripmq](https://github.com/jtangelder/gulp-stripmq) - [postcss](https://www.npmjs.com/package/postcss-unmq)
+	- px_to_rem - postcss
+	- autoprefixer - postcss
+	- combine_mq - postcss?
+	- cssmin - postcss
+	- csscomb - postcss?
 	- [csslint](https://www.npmjs.com/package/gulp-csslint)
 	- [modernizr](https://www.npmjs.com/package/gulp-modernizr)
 	- [copy](https://www.npmjs.com/package/gulp-copy)
