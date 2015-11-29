@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 			srcPlugins: 'plugins',
 			srcStyles: 'styles',
 			srcTemp: 'temp',
-			mainLess: '_bb-component-framework.less',
+			mainLess: '_component-framework.less',
 			// Dist settings
 			dist: 'dist',
 			distFonts: 'fonts',
