@@ -28,6 +28,7 @@ module.exports = function(grunt) {
 			srcScripts: 'scripts',
 			srcModules: 'modules',
 			srcPlugins: 'plugins',
+			srcComponents: 'components',
 			srcStyles: 'styles',
 			srcTemp: 'temp',
 			mainLess: '_component-framework.less',
@@ -84,7 +85,8 @@ module.exports = function(grunt) {
 				files: [
 					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/*.css',
 					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/**/*.less',
-					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/_mixins/mixins-*.less'
+					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/_mixins/mixins-*.less',
+					'<%= config.src %>/<%= config.srcComponents %>/**/*.less'
 				],
 				tasks: [
 					'build_styles'
