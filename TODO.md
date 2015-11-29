@@ -1,6 +1,6 @@
 # TODO
 
-- [Spike out Gulp version](https://github.com/furzeface/blackledge/issues/9)
+- [Gulp version](https://github.com/furzeface/blackledge/issues/9)
 	- load tasks
 	- time tasks
 	- watch
@@ -25,3 +25,5 @@
 	- clean - maybe [rimraf](https://github.com/isaacs/rimraf) or [del](https://www.npmjs.com/package/del) instead
 	- [prettify](https://www.npmjs.com/package/gulp-prettify)
 	- **testing tasks**
+- Redo with Sass
+- Remove `helpers` from repository, install as a dependency

@@ -6,6 +6,9 @@ layout: src/layouts/_bb.hbs
 
 <div class="container">
 	<header class="header" role="banner">
+		<figure class="logo">
+			<img src="{{assets}}/_bb/logo.png" alt="Blackledge Component Framework" />
+		</figure>
 		<h1 class="project-title">
 			{{{package.title}}} {{{package.version}}}
 			<span class="last-modified">
@@ -14,6 +17,15 @@ layout: src/layouts/_bb.hbs
 		</h1>
 	</header>
 	<div class="main" id="main" role="main">
-		{{>component-list}}
+		<h2>Components</h2>
+		<ul class="file-list">
+			{{#withSort pages "filename"}}
+				{{#unless data.hide}}
+					<li class="file">
+						<a href="{{relative dest this.dest}}">{{filename}}</a>
+					</li>
+				{{/unless}}
+			{{/withSort}}
+		</ul>
 	</div>
 </div>

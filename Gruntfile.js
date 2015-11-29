@@ -29,7 +29,6 @@ module.exports = function(grunt) {
 			srcModules: 'modules',
 			srcPlugins: 'plugins',
 			srcStyles: 'styles',
-			srcStyleguide: '<%= config.styleguide %>',
 			srcTemp: 'temp',
 			mainLess: '_bb-component-framework.less',
 			// Dist settings
@@ -42,7 +41,6 @@ module.exports = function(grunt) {
 			distTemp: 'temp',
 			mainCss: 'main.css',
 			ieCss: 'ie.css',
-			styleguide: 'styleguide-template',
 			// Project settings
 			assembleExt: 'hbs',
 			helpers: 'helpers',
@@ -66,7 +64,7 @@ module.exports = function(grunt) {
 			},
 			html: {
 				files: [
-					'<%= config.src %>/{data,pages,partials,layouts}/**/*.{<%= config.assembleExt %>,json}',
+					'<%= config.src %>/{components,pages,layouts}/**/*.{<%= config.assembleExt %>,json}',
 				],
 				tasks: [
 					'build_html'
@@ -128,7 +126,7 @@ module.exports = function(grunt) {
 				flatten: false,
 				layout: false,
 				partials: [
-					'<%= config.src %>/{layouts,partials}/**/*.<%= config.assembleExt %>'
+					'<%= config.src %>/{components,layouts}/**/*.<%= config.assembleExt %>'
 				],
 				helpers: [
 					'<%= config.src %>/<%= config.helpers %>/helper-*.js'
@@ -141,13 +139,13 @@ module.exports = function(grunt) {
 				mainCss: '<%= config.mainCss %>',
 				ieCss: '<%= config.ieCss %>',
 				data: [
-					'<%= config.src %>/data/**/*.json',
+					'<%= config.src %>/components/**/*.json',
 					'package.json',
 				],
 				timestamp: '<%= grunt.template.today("mmm dS yyyy, h:MMtt Z") %>',
 				copyrightYear: '<%= grunt.template.today("yyyy") %>'
 			},
-			components: {
+			pages: {
 				files: [{
 					expand: true,
 					cwd: '<%= config.src %>/pages/',
