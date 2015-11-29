@@ -74,6 +74,7 @@ module.exports = function(grunt) {
 			scripts: {
 				files: [
 					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/**/**.js',
+					'<%= config.src %>/<%= config.srcComponents %>/**/*.js'
 				],
 				tasks: [
 					'build_scripts'
@@ -232,6 +233,7 @@ module.exports = function(grunt) {
 					// Our scripts
 					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/<%= config.srcPlugins %>/combine/*.js',
 					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/<%= config.srcModules %>/*.js',
+					'<%= config.src %>/<%= config.srcComponents %>/**/*.js',
 					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/_init.js'
 				],
 				dest: '<%= config.dist %>/<%= config.distScripts %>/scripts.js'
