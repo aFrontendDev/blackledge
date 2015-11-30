@@ -22,6 +22,7 @@ Thumbs.db
 
 # project meta
 *.sublime-workspace
+.package.json
 
 # installed components
 bower_components
