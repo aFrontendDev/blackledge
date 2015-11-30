@@ -1,29 +1,30 @@
 # TODO
 
-- [Gulp version](https://github.com/furzeface/blackledge/issues/9)
-	- load tasks
-	- time tasks
-	- watch
-	- connect
-	- assemble
-	- [jsbeautifier](https://github.com/beautify-web/js-beautify)
-	- jshint
-	- concat
-	- uglify
-	- [less](https://github.com/plus3network/gulp-less)
-	- [**sass**](https://www.npmjs.com/package/gulp-sass)
-	- [**postcss**](https://www.npmjs.com/package/postcss)
-	- [stripmq](https://github.com/jtangelder/gulp-stripmq) - [postcss](https://www.npmjs.com/package/postcss-unmq)
-	- px_to_rem - postcss
-	- autoprefixer - postcss
-	- combine_mq - postcss?
-	- cssmin - postcss
-	- csscomb - postcss?
-	- [csslint](https://www.npmjs.com/package/gulp-csslint)
-	- [modernizr](https://www.npmjs.com/package/gulp-modernizr)
-	- [copy](https://www.npmjs.com/package/gulp-copy)
-	- clean - maybe [rimraf](https://github.com/isaacs/rimraf) or [del](https://www.npmjs.com/package/del) instead
-	- [prettify](https://www.npmjs.com/package/gulp-prettify)
-	- **testing tasks**
-- Redo with Sass
-- Remove `helpers` from repository, install as a dependency
+- [ ] Reimplement JSDocs
+- [ ] Remove `helpers` from repository, install as a dependency
+- [ ] Redo with Sass
+- [ ] [Gulp version](https://github.com/furzeface/blackledge/issues/9)
+	- [ ] load tasks?
+	- [ ] time tasks?
+	- [ ] watch
+	- [ ] connect/server
+	- [ ] assemble
+	- [ ] [jsbeautifier](https://github.com/beautify-web/js-beautify)
+	- [ ] jshint
+	- [ ] concat
+	- [ ] uglify
+	- [ ] [less](https://github.com/plus3network/gulp-less)
+	- [ ] [**sass**](https://www.npmjs.com/package/gulp-sass)
+	- [ ] [**postcss**](https://www.npmjs.com/package/postcss)
+	- [ ] [stripmq](https://github.com/jtangelder/gulp-stripmq) - [postcss](https://www.npmjs.com/package/postcss-unmq)
+	- [ ] px_to_rem - postcss
+	- [ ] autoprefixer - postcss
+	- [ ] combine_mq - postcss?
+	- [ ] cssmin - postcss
+	- [ ] csscomb - postcss?
+	- [ ] [csslint](https://www.npmjs.com/package/gulp-csslint)
+	- [ ] [modernizr](https://www.npmjs.com/package/gulp-modernizr)
+	- [ ] [copy](https://www.npmjs.com/package/gulp-copy)
+	- [ ] clean - maybe [rimraf](https://github.com/isaacs/rimraf) or [del](https://www.npmjs.com/package/del) instead
+	- [ ] [prettify](https://www.npmjs.com/package/gulp-prettify)
+	- [ ] **testing tasks**
