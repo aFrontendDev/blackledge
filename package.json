@@ -6,7 +6,7 @@
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/furzeface/build-tools-workshop.git"
+    "url": "git+ssh://git@github.com/furzeface/blackledge.git"
   },
   "bugs": {
     "url": "https://waffle.io/furzeface/blackledge"
