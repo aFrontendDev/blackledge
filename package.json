@@ -15,13 +15,26 @@
   "author": "Daniel Furze <daniel@furzeface.com>",
   "contributors": [
     {
-      "name": "Dan",
+      "name": "Rob Ford",
+      "url": "https://github.com/rajf",
+      "contributions": 1,
+      "additions": 4,
+      "deletions": 0
+    },
+    {
+      "name": "Andy Blackledge",
+      "url": "https://github.com/ablackledge",
+      "contributions": 1,
+      "additions": 167,
+      "deletions": 0
+    },
+    {
+      "name": "Daniel Furze",
       "email": "daniel@furzeface.com",
       "url": "https://github.com/furzeface",
-      "contributions": 12,
-      "additions": 397,
-      "deletions": 28,
-      "hireable": null
+      "contributions": 22,
+      "additions": 17229,
+      "deletions": 3887
     }
   ],
   "license": "http://danielfurze.mit-license.org",
