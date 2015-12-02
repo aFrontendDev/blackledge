@@ -4,32 +4,32 @@ title: Layout A
 {{#extend "master"}}
 	{{! Main Content }}
 	{{#content "master-body"}}
-		{{#if_block "features-top"}}
+		{{#if "features-top"}}
 			{{#block "features-top"}}{{/block}}
-		{{/if_block}}
+		{{/if}}
 		<main class="main" id="main" role="main">
-			{{#if_block "sections-top"}}
+			{{#if "sections-top"}}
 				{{#block "sections-top"}}{{/block}}
-			{{/if_block}}
-			{{#if_block "region-a"}}
+			{{/if}}
+			{{#if "region-a"}}
 			<div class="layout layout-a">
 				{{body}}
-				{{#if_block "region-a"}}
+				{{#if "region-a"}}
 				<div class="region region-a">
 					<div class="region-inner">
 						{{#block "region-a"}}{{/block}}
 					</div>
 				</div>
-				{{/if_block}}
+				{{/if}}
 			</div>
-			{{/if_block}}
-			{{#if_block "sections-bottom"}}
+			{{/if}}
+			{{#if "sections-bottom"}}
 				{{#block "sections-bottom"}}{{/block}}
-			{{/if_block}}
+			{{/if}}
 		</main>
-		{{#if_block "features-bottom"}}
+		{{#if "features-bottom"}}
 			{{#block "features-bottom"}}{{/block}}
-		{{/if_block}}
+		{{/if}}
 	{{/content}}
 	{{! Additional Content for <head> and just before </body>}}
 	{{#content "master-head" mode="extend"}}

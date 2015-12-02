@@ -132,6 +132,7 @@ module.exports = function(grunt) {
 					'<%= config.src %>/{components,layouts}/**/*.<%= config.assembleExt %>'
 				],
 				helpers: [
+					'node_modules/handlebars-helpers/lib/**/*.js',
 					'<%= config.src %>/<%= config.helpers %>/helper-*.js'
 				],
 				assets: '<%= config.dist %>',
