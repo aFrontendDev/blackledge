@@ -9,17 +9,15 @@ var bb = bb ? bb : {};
 		 * Scroll to element based on querystring id
 		 * @namespace scrollto
 		 */
-		scrollto: {
+		scrollTo: {
 			// jQuery objs
 			$actionScrollto: null,
 			// Selectors
 			actionScrolltoSelector: '.scroll-to-action',
-			// Classes
 			// Configuration
 			scrollSpeed: 500,
-			// Misc
 			/**
-			 * Initialises viewport resize module, binds event to window resize.
+			 * Initialises scrollTo module, binds event to window resize.
 			 * @function init
 			 * @memberOf scrollto
 			 */
@@ -28,24 +26,31 @@ var bb = bb ? bb : {};
 
 				// scroll down to element automatically if the 'scrollto' query string is present in url
 				var queryString = bb.getUrlParams('scrollto');
+
 				if (queryString && queryString.length > 0) {
 					self.scrollToElement('#' + queryString);
 				}
 
 				self.bindEvents();
 			},
+			/**
+			 * Binds all scrollTo module events.
+			 * @function bindEvents
+			 * @memberOf scrollTo
+			 */
 			bindEvents: function() {
 				var self = this;
 
 				self.$actionScrollto = $(self.actionScrolltoSelector);
+
 				self.$actionScrollto.on('click.scrollto', function(e) {
 					e.preventDefault();
 
-					var $this = $(this);
-					var dataScrolltoTarget = $this.data('scrollto-target');
-					var hrefTarget = $this.attr('href');
-					var target = null;
-					var dataScrollSpeed = $this.data('scrollto-speed');
+					var $this = $(this),
+						dataScrolltoTarget = $this.data('scrollto-target'),
+						hrefTarget = $this.attr('href'),
+						target = null,
+						dataScrollSpeed = $this.data('scrollto-speed');
 
 					if (dataScrolltoTarget && dataScrolltoTarget.length > 0) {
 						target = dataScrolltoTarget;
@@ -56,10 +61,18 @@ var bb = bb ? bb : {};
 					self.scrollToElement(target, dataScrollSpeed);
 				});
 			},
+			/**
+			 * Scrolls the window to the top of element.
+			 * @function scrollToElement
+			 * @memberOf scrollTo
+			 * @param  {String} id - ID to search the DOM for
+			 * @param  {Number} scrollSpeed Optional speed to scroll
+			 * @todo update query string with ID of element scrolled to, for bookmarking - using history API?
+			 */
 			scrollToElement: function(id, scrollSpeed) {
-
 				if (!id) {
-					bb.log('ERROR: scrollto - scrollToElement() - no id');
+					bb.log('ERROR: scrollTo.scrollToElement() - no id');
+
 					return;
 				}
 
@@ -68,17 +81,15 @@ var bb = bb ? bb : {};
 					speed = null;
 
 				if (!$element || $element.length < 1) {
-					bb.log('ERROR: scrollto - scrollToElement() - no $element');
+					bb.log('ERROR: scrollTo.scrollToElement() - no $element');
+
 					return;
 				}
 
-				if (scrollSpeed) {
-					speed = scrollSpeed;
-				} else {
-					speed = self.scrollSpeed;
-				}
+				speed = scrollSpeed ? scrollSpeed : self.scrollSpeed;
 
 				var elementPosition = $element.offset().top;
+
 				bb.settings.$htmlbody.animate({
 					scrollTop: elementPosition
 				}, speed);
@@ -86,6 +97,6 @@ var bb = bb ? bb : {};
 		}
 	});
 	$.subscribe('pageLoaded', function() {
-		bb.scrollto.init();
+		bb.scrollTo.init();
 	});
 }(jQuery));

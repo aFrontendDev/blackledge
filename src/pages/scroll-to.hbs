@@ -3,74 +3,69 @@ title: Scroll To demo page
 ---
 
 {{#extend "layout-a"}}
-
-	{{#content "sections-top"}}
-	{{/content}}
-
 	{{#content "region-a"}}
-	<div class="block block-size-a">
-		<h1 class="title-stylesheet">Scroll To</h1>
+		<div class="block block-size-a">
+			<h1 class="title-stylesheet">Scroll To</h1>
 
-		<h2 class="subtitle-stylesheet">Scroll To example functionality <small><code>.scroll-to</code></small></h2>
-		<p><em>This functionality will allow you to scroll to an element on click or automatically from the query string in the url</em></p>
+			<h2 class="subtitle-stylesheet">Scroll To example functionality <small><code>.scroll-to-action</code></small></h2>
+			<p><em>This functionality will allow you to scroll to an element on click or automatically from the query string in the url</em></p>
 
-		<p>
-			<a href="#div-a" class="scroll-to-action">
-				Traditional scroll to element based on href
-			</a>
-		</p>
+			<p>
+				<a href="#div-a" class="scroll-to-action">
+					Traditional scroll to element based on href
+				</a>
+			</p>
 
-		<p>
-			<a href="#div-a" data-scrollto-target="#div-b" class="scroll-to-action">
-				Scroll to element based on data attribute
-			</a>
-		</p>
+			<p>
+				<a href="#div-a" data-scrollto-target="#div-b" class="scroll-to-action">
+					Scroll to element based on data attribute
+				</a>
+			</p>
 
-		<p>
-			<a href="#div-a" data-scrollto-speed="2000" class="scroll-to-action">
-				Scroll to element with scroll speed specified
-			</a>
-		</p>
+			<p>
+				<a href="#div-a" data-scrollto-speed="2000" class="scroll-to-action">
+					Scroll to element with scroll speed specified
+				</a>
+			</p>
 
-		<p>
-			<a href="scroll-to.html?scrollto=div-b">
-				Scroll to element on load via querystring
-			</a>
-		</p>
-	</div>
+			<p>
+				<a href="scroll-to.html?scrollto=div-b">
+					Scroll to element on load via querystring
+				</a>
+			</p>
+		</div>
 
-	<div class="block block-size-a">
-		<h2 class="subtitle-stylesheet">Implementation information</h2>
-		<h3 class="beta">To use scroll to:</h3>
-		<ul>
-			<li>To use via a link/button click a class of 'scroll-to-action' is needed on the link</li>
-			<li>It will default to the id found in the href unless there is a data attribute of 'data-scrollto-target' that specified the elements id that should be scrolled to</li>
-			<li>The default scroll speed is set in the JS (500) but this can be overridden via a data attribute of 'data-scrollto-speed'</li>
-			<li>To scroll to an element on page load just add the querystring 'scrollto' with the elements id, e.g. 'page.html?scrollto=div-a'</li>
-		</ul>
+		<div class="block block-size-a">
+			<h2 class="subtitle-stylesheet">Implementation information</h2>
+			<h3 class="beta">To use scroll to:</h3>
+			<ul>
+				<li>To use via a link/button click <code>.scroll-to-action</code> is needed on the link</li>
+				<li>It will default to the id found in the href unless there is a data attribute of 'data-scrollto-target' that specified the elements id that should be scrolled to</li>
+				<li>The default scroll speed is set in the JS (500) but this can be overridden via a data attribute of <code>data-scrollto-speed</code></li>
+				<li>To scroll to an element on page load just add the querystring 'scrollto' with the element’s id, e.g. 'page.html?scrollto=div-a'</li>
+			</ul>
 
-		<h3 class="beta">The relevant files:</h3>
-		<pre>
-			<code>
-src/
-|
-|- assets/
-|  |- scripts/
-|      |- modules/
-|        |- scrollto.js
-|- pages/
-|  |- scroll-to.hbs
-			</code>
-		</pre>
-	</div>
+			<h3 class="beta">The relevant files:</h3>
+			<pre>
+				<code>
+	src/
+	|
+	|- assets/
+	|  |- scripts/
+	|      |- modules/
+	|        |- scrollto.js
+	|- pages/
+	|  |- scroll-to.hbs
+				</code>
+			</pre>
+		</div>
 
-	<div id="div-a" class="block block-size-a" style="margin: 1000px 0px">
-		DIV A
-	</div>
+		<div id="div-a" class="block block-size-a scroll-to-demo">
+			DIV A
+		</div>
 
-	<div id="div-b" class="block block-size-a" style="margin: 1000px 0px">
-		DIV B
-	</div>
+		<div id="div-b" class="block block-size-a scroll-to-demo">
+			DIV B
+		</div>
 	{{/content}}
-
 {{/extend}}
