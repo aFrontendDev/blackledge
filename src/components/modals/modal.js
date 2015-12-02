@@ -38,6 +38,7 @@ var bb = bb ? bb : {};
 				var self = this;
 
 				self.bindEvents();
+				self.closeEvents();
 			},
 			/**
 			 * Binds all Modal related events.
@@ -49,7 +50,6 @@ var bb = bb ? bb : {};
 
 				$(self.modalActionSelectors).on('click.modals', function(event) {
 					event.preventDefault();
-
 					var $action = $(this);
 
 					if (self.modalIn) {
@@ -65,6 +65,10 @@ var bb = bb ? bb : {};
 					}
 
 				});
+
+			},
+			closeEvents: function () {
+				var self = this;
 
 				$(self.modalCloseSelectors).on('click.modals touchend.modals', function(event) {
 					event.preventDefault();
@@ -87,6 +91,12 @@ var bb = bb ? bb : {};
 					if (!self.overModal && !Modernizr.touch) {
 						self.closeModal();
 					}
+				});
+
+				bb.settings.$body.on('mouseenter.overlay', '.modal-inner', function () {
+					self.overModal = true;
+				}).on('mouseleave.overlay', '.modal-inner', function () {
+					self.overModal = false;
 				});
 			},
 			/**
@@ -207,7 +217,8 @@ var bb = bb ? bb : {};
 					// run functions over the new content
 					bb.ajaxLoaded();
 
-					self.init();
+					//self.init();
+					self.closeEvents();
 					self.modalIn = true;
 					clearTimeout(ajaxWait);
 				}, 30);
