@@ -54,19 +54,15 @@ includeTota11y: true
 				<code>
 src/
 |
-|- assets/
-|- |- scripts/
-|- |- |- videosYoutube.js
-|  |- styles/
-|      |- components/
-|        |- hero.less
-|- data/
-|-  |- hero.json
+|- components/
+|  |- hero/
+|    |- hero-video-embed.hbs
+|    |- videosResponsive.js
+|    |- videosYoutube.js
+|    |- hero.json
+|    |- hero.less
 |- pages/
 |  |- hero.hbs
-|- partials/
-|  |- hero/
-|      |- hero-video-embed.hbs
 				</code>
 			</pre>
 		</div>
@@ -115,20 +111,16 @@ src/
 						<code>
 src/
 |
-|- assets/
-|- |- scripts/
-|- |- |- videosResponsive.js
-|- |- |- videosVimeo.js
-|  |- styles/
-|      |- components/
-|        |- hero.less
-|- data/
-|-  |- hero.json
+|- components/
+|  |- hero/
+|    |- hero-video-embed.hbs
+|    |- videosResponsive.js
+|    |- videosVimeo.js
+|    |- hero.json
+|    |- hero.less
 |- pages/
 |  |- hero.hbs
-|- partials/
-|  |- hero/
-|      |- hero-video-embed.hbs</code>
+						</code>
 					</pre>
 					<p>As well as 3rd party assets from <code>bower_components</code>, added during the JavaScript build:</p>
 					<pre>
