@@ -414,12 +414,12 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			bb: {
+			base: {
 				files: [{
 					expand: true,
-					cwd: '<%= config.src %>/<%= config.srcAssets %>/_bb/',
+					cwd: '<%= config.src %>/<%= config.srcAssets %>/_base/',
 					src: ['**'],
-					dest: '<%= config.dist %>/_bb'
+					dest: '<%= config.dist %>/_base'
 				}]
 			},
 			assets: {
@@ -544,7 +544,7 @@ module.exports = function(grunt) {
 		'clean:styles',
 		'build_styles',
 		// 'modernizr',
-		'copy:bb'
+		'copy:base'
 	]);
 	grunt.registerTask('build_production', [
 		'build_dev',
