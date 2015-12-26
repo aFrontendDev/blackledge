@@ -3,7 +3,7 @@
 - [Forking and branching](#forking-and-branching)
 - [Discussing Issues](#discussing-issues)
 - [Commit messages](#commit-messages)
-- [Issues](#issues)
+- [Issues](#issues-)
 - [Contributors](#contributors)
 
 ## Discussing Issues
