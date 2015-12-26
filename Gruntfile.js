@@ -41,6 +41,8 @@ module.exports = function(grunt) {
 			distStyles: '_styles',
 			distTemp: 'temp',
 			mainCss: 'main.css',
+			distDocs: 'docs',
+			distJsDocs: 'jsdocs',
 			// Project settings
 			assembleExt: 'hbs',
 			helpers: 'helpers',
@@ -116,6 +118,20 @@ module.exports = function(grunt) {
 					hostname: 'localhost',
 					open: true,
 					base: '<%= config.dist %>'
+				}
+			}
+		},
+
+		// Documentation tasks
+		jsdoc: {
+			all: {
+				src: [
+					'Gruntfile.js',
+					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/*.js'
+				],
+				options: {
+					destination: '<%= config.dist %>/<%= config.distDocs %>/<%= config.distJsDocs %>',
+					configure: '.jsdoc.conf.json'
 				}
 			}
 		},
@@ -505,6 +521,9 @@ module.exports = function(grunt) {
 		// 'modernizr',
 		'copy:base'
 	]);
+	grunt.registerTask('build_docs', [
+		'jsdoc'
+	]);
 	grunt.registerTask('build_production', [
 		'build_dev',
 		'cssmin',
@@ -526,6 +545,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('serve', [
 		'clean:everything',
 		'build_dev',
+		'build_docs',
 		'connect',
 		'watch'
 	]);

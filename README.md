@@ -18,7 +18,8 @@ grunt serve
 See [contributing.md](contributing.md).
 
 ## Documentation
-_Todo._
+Hit `/docs/jsdocs/` from the served static site to view [JSDocs](http://usejsdoc.org).
+_Todo - more._
 
 ## Testing
 _Todo._
