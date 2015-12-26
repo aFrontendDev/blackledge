@@ -1,7 +1,7 @@
 # Contributing [![Stories in Ready][waffle-image]][waffle-url]
 
 - [Forking and branching](#forking-and-branching)
-- [Issues](#issues)
+- [Issues](#issues-)
 - [Contributors](#contributors)
 
 ## Forking and branching
