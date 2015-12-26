@@ -1,8 +1,8 @@
 # TODO
 
 - [ ] Reimplement JSDocs
-- [ ] Remove `helpers` from repository, install as a dependency
-- [ ] Redo with Sass
+- [x] Remove `helpers` from repository, install as a dependency
+- [x] Redo with Sass
 - [ ] [Gulp version](https://github.com/furzeface/blackledge/issues/9)
 	- [ ] load tasks?
 	- [ ] time tasks?
