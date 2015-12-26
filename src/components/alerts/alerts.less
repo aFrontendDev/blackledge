@@ -1,12 +1,12 @@
 // alerts
 
-@color-success: #28E146;
-@color-warning: #FFA500;
-@color-info: #287FE1;
-@color-error: #CC2000;
+$color-success: #28E146;
+$color-warning: #FFA500;
+$color-info: #287FE1;
+$color-error: #CC2000;
 
 .alerts {
-	color: @color-text;
+	color: $color-text;
 	width: 100%;
 
 	.js & {
@@ -29,7 +29,7 @@
 	@media @BPD {
 		margin:0 @ggw/2;
 		max-width: 950px;
-		padding-bottom: @vr*3;
+		padding-bottom: $vr*3;
 	}
 
 	@media @BPE {
@@ -38,7 +38,7 @@
 }
 
 .alert-container {
-	margin-bottom: @vr*2;
+	margin-bottom: $vr*2;
 
 	&:last-of-type {
 		margin-bottom: 0;
@@ -49,18 +49,18 @@
 	background: #FFF;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 	position: relative;
-	margin: @vr;
-	min-height: @vr*13;
-	padding: @vr*3 @ggw*2 @vr*3 @ggw*2;
+	margin: $vr;
+	min-height: $vr*13;
+	padding: $vr*3 @ggw*2 $vr*3 @ggw*2;
 	z-index: 1001;
 
 	@media @BPD {
 		margin: 0;
-		padding: @vr*2 @ggw*2 @vr*2 @ggw*2;
+		padding: $vr*2 @ggw*2 $vr*2 @ggw*2;
 	}
 
 	.alert + & {
-		margin-top: @vr;
+		margin-top: $vr;
 	}
 
 	.cssanimations & {
@@ -100,33 +100,33 @@
 	}
 
 	.@{icon-prefix} {
-		font-size: @vr*4;
+		font-size: $vr*4;
 	}
 }
 
 // themes
 .alert-success {
 	.alert-dismiss {
-		color: @color-success;
+		color: $color-success;
 	}
 }
 
 .alert-warning {
 	.alert-dismiss {
-		color: @color-warning;
+		color: $color-warning;
 	}
 }
 
 .alert-notice {
 	.alert-dismiss {
 		color: #5693f9;
-		color: @color-info;
+		color: $color-info;
 	}
 }
 
 .alert-error {
 	.alert-dismiss {
-		color: @color-error;
+		color: $color-error;
 	}
 }
 
@@ -137,42 +137,42 @@
 	color: #000;
 	// cursor: pointer;
 	font-size: 18px;
-	line-height: @vr*5;
+	line-height: $vr*5;
 	position: absolute;
-	top: @vr*2;
+	top: $vr*2;
 	right: 15px;
 
 	@media @BPD {
-		top: @vr*2;
+		top: $vr*2;
 		right: 15px;
 	}
 }
 
 .alert-title {
 	font-size: 14px;
-	line-height: @vr*3;
+	line-height: $vr*3;
 	margin-top: 0;
-	margin-bottom: @vr;
+	margin-bottom: $vr;
 
 	@media @BPD {
 		font-size: 18px;
-		line-height: @vr*5;
+		line-height: $vr*5;
 		margin-bottom: 0;
 	}
 }
 
 .alert-content {
 	font-size: 14px;
-	line-height: @vr*3;
+	line-height: $vr*3;
 
 	@media @BPD {
 		font-size: 16px;
-		line-height: @vr*4;
+		line-height: $vr*4;
 	}
 
 	p {
 		margin-top: 0;
-		margin-bottom: @vr*2;
+		margin-bottom: $vr*2;
 	}
 
 	*:last-child {

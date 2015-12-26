@@ -17,7 +17,6 @@ var bb = bb ? bb : {};
 			blockSelector: '.block',
 			containerSelector: '.region-inner',
 			lastClass: 'block-last',
-			ieLastClass: 'block-last-clear',
 			// Configuration
 			processing: false,
 			roundingOffset: 3,

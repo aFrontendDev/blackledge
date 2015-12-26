@@ -25,13 +25,13 @@ module.exports = function(grunt) {
 			srcFonts: 'fonts',
 			srcImages: 'images',
 			srcVideo: 'video',
+			srcStyles: 'styles',
 			srcScripts: 'scripts',
 			srcModules: 'modules',
 			srcPlugins: 'plugins',
 			srcComponents: 'components',
-			srcStyles: 'styles',
 			srcTemp: 'temp',
-			mainLess: '_component-framework.less',
+			mainSass: 'component-framework.scss',
 			// Dist settings
 			dist: 'dist',
 			distFonts: 'fonts',
@@ -83,10 +83,8 @@ module.exports = function(grunt) {
 			},
 			styles: {
 				files: [
-					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/*.css',
-					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/**/*.less',
-					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/_mixins/mixins-*.less',
-					'<%= config.src %>/<%= config.srcComponents %>/**/*.less'
+					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/**/*.scss',
+					'<%= config.src %>/<%= config.srcComponents %>/**/*.scss'
 				],
 				tasks: [
 					'build_styles'
@@ -204,12 +202,6 @@ module.exports = function(grunt) {
 		},
 
 		concat: {
-			lessMixins: {
-				src: [
-					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/_mixins/*.less'
-				],
-				dest: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/_mixins/_combined.less'
-			},
 			jquery: {
 				src: [
 					'<%= config.bower %>/jquery/dist/jquery.js'
@@ -264,13 +256,17 @@ module.exports = function(grunt) {
 		},
 
 		// Style tasks
-		less: {
+		sass: {
 			main: {
+				options: {
+					style: 'expanded'
+				},
 				files: {
-					'<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>': '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.mainLess %>'
+					'<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>': '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.mainSass %>'
 				}
 			}
 		},
+
 
 		px_to_rem: {
 			main: {
@@ -488,8 +484,9 @@ module.exports = function(grunt) {
 		'copy:scripts'
 	]);
 	grunt.registerTask('build_styles', [
-		'concat:lessMixins',
-		'less',
+		// 'concat:lessMixins',
+		// 'less',
+		'sass',
 		'autoprefixer',
 		'px_to_rem',
 		'combine_mq',

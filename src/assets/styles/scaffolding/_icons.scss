@@ -11,7 +11,7 @@
 	font-style: normal;
 }
 
-.icon() {
+%icon {
 	font-family: '@{icon-font}';
 	font-style: normal;
 	font-weight: normal;
@@ -23,8 +23,8 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.@{icon-prefix} {
-	.icon();
+.icon {
+	@extend %icon;
 
 	// For dev purposes only
 	&:before {
@@ -32,6 +32,6 @@
 	}
 }
 
-.@{icon-prefix}-placeholder:before {
+.icon-placeholder:before {
 	content: '\f096';
 }

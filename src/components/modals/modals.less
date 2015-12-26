@@ -119,17 +119,17 @@
 }
 
 .modal {
-	margin: 0 -@ggw-smallscreen @vr*4;
+	margin: 0 -@ggw-smallscreen $vr*4;
 	position: relative;
 	width: 50%; // for dev purposes - theme according to your needs
 	z-index: 2;
 
 	@media @BPD {
-		margin: 0 auto @vr*4;
+		margin: 0 auto $vr*4;
 	}
 
 	.modal-container & {
-		margin: 0 -@ggw-smallscreen @vr*4;
+		margin: 0 -@ggw-smallscreen $vr*4;
 		max-height: 500px;  // keep a decent perspective on flip
 		overflow: visible;
 
@@ -138,8 +138,8 @@
 		}
 
 		@media @BPF {
-			margin: 0 auto @vr*4;
-			padding: @vr*10 0;
+			margin: 0 auto $vr*4;
+			padding: $vr*10 0;
 		}
 	}
 
@@ -182,14 +182,14 @@
 }
 
 .modal-inner {
-	padding-bottom: @vr*3;
+	padding-bottom: $vr*3;
 	position: relative;
 	margin: 10px;
 
 	@media @BPF {
 		margin: 0;
 		left: -10px;
-		padding-bottom: @vr*6;
+		padding-bottom: $vr*6;
 	}
 }
 
@@ -229,15 +229,15 @@
 
 	color: #FFF;
 	position: relative;
-	padding: @vr*3 40px @vr*3 @ggw-smallscreen;
+	padding: $vr*3 40px $vr*3 @ggw-smallscreen;
 	z-index: 2;
 
 	@media @BPF {
-		padding: @vr*5 @ggw;
+		padding: $vr*5 @ggw;
 	}
 
 	.modal-title {
-		font-weight: @font-weight-bold;
+		font-weight: $font-weight-bold;
 		margin: 0;
 	}
 }
@@ -245,11 +245,11 @@
 .modal-body {
 	background: #FFF;
 	overflow: hidden;
-	padding: @vr*3 @ggw-smallscreen 0;
+	padding: $vr*3 @ggw-smallscreen 0;
 	position: relative;
 	z-index: 2;
 
 	@media @BPF {
-		padding: @vr*4 @modal-padding-x 0;
+		padding: $vr*4 @modal-padding-x 0;
 	}
 }

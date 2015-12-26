@@ -21,8 +21,9 @@ Thumbs.db
 .Trashes
 
 # project meta
-*.sublime-workspace
+.sass-cache
 .package.json
+*.sublime-workspace
 
 # installed components
 bower_components

@@ -1,0 +1,32 @@
+// Setup
+@import 'scaffolding/mixins';
+@import 'scaffolding/variables';
+
+// Base
+@import './bower_components/normalize-scss/normalize';
+@import 'scaffolding/global';
+@import 'scaffolding/layout';
+@import 'scaffolding/icons';
+@import 'scaffolding/type';
+
+// Scaffolding components
+@import 'components/buttons';
+@import 'components/lists';
+@import 'components/forms';
+
+// Framework components
+// @import '../../components/alerts/alerts';
+// @import '../../components/carousel/carousel';
+// @import '../../components/content-card/content-card';
+// @import '../../components/hero/hero';
+// @import '../../components/modals/modals';
+// @import '../../components/modals/overlay';
+// @import '../../components/toggle-content/toggle-content';
+
+// // Helpers
+@import 'utilities/utilities';
+@import 'utilities/utilities-responsive';
+@import 'utilities/monitor-mq';
+
+// // 3rd party assets
+// @import '../../components/carousel/carousel-owl';
