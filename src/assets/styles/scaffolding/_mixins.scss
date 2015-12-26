@@ -1,0 +1,126 @@
+// @todo sass docs
+// @todo refactor file
+@mixin placeholder($color) {
+	:-moz-placeholder            { color: $color; } // Firefox 4-18
+	::-moz-placeholder           { color: $color; } // Firefox 19+
+	:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
+	::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+// Fluid Widths
+// calculates a "fluid" (percentage) width (Ethan Marcotte: target / context = result method: http://alistapart.com/article/fluidgrids)
+@mixin fluid-width($target, $context) {
+	width: 100%*($target/$context);
+}
+
+@mixin fluid-margin-right($target, $context) {
+	margin-right: 100%*($target/$context);
+}
+
+@mixin fluid-margin-left($target, $context) {
+	margin-left: 100%*($target/$context);
+}
+
+@mixin fluid-padding-right($target, $context) {
+	padding-right: 100%*($target/$context);
+}
+
+@mixin fluid-padding-left($target, $context) {
+	padding-left: 100%*($target/$context);
+}
+
+@mixin fluid-right($target, $context) {
+	right: 100%*($target/$context);
+}
+
+@mixin fluid-left($target, $context) {
+	left: 100%*($target/$context);
+}
+
+
+// For clearing floats // @todo should be placeholder
+@mixin clearfix() {
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+ // @todo should be placeholder
+@mixin visually-hidden() {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+// Form input appearance // @todo probably dont need this
+@mixin appearance($appearance){
+	-webkit-appearance: $appearance;
+	   -moz-appearance: $appearance;
+	    -ms-appearance: $appearance;
+		 -o-appearance: $appearance;
+			appearance: $appearance;
+}
+
+// Generic block size mixin
+@mixin size($width, $height: $width) {
+	height: $height;
+	width: $width;
+}
+
+// @TODO should be placeholders
+@mixin vertically-centered() {
+	.csstransforms & {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+@mixin horizontally-centered() {
+	.csstransforms & {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@mixin totally-centered() {
+	.csstransforms & {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+// //////////////////
+// should be a placeholder, refactor into own file
+//
+@mixin reset-button() {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}

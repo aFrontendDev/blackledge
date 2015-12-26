@@ -1,51 +1,17 @@
 // Forms
-//
-// Styleguide 3
-
-// Form grid sizes
-//
-// .input-mini       - Tiny input
-// .input-small      - Small input
-// .input-medium     - Medium input
-// .input-large      - Large input
-// .input-xlarge     - Extra large input
-// .input-xxlarge    - Huge input
-//
-// Markup:
-// <div class="form form-horizontal form-style-a form-validate">
-//		<form id="form1" name="form1" action="#" method="post">
-//			<div class="control-group control-group-odd control-group-block">
-//				<div class="control-label">
-//					<label>Form grid sizes</label>
-//				</div>
-//				<div class="controls">
-//					<input class="{{modifier_class}}" type="text/>
-//					<select>
-//						<option>input</option>
-//						<option>2</option>
-//						<option>3</option>
-//						<option>4</option>
-//						<option>5</option>
-//					</select>
-//				</div>
-//			</div>
-//      </form>
-// </div>
-//
-// Styleguide 3.1
 
 // Forms specific variables
-@input-border-width: 1px;
+$input-border-width: 1px;
 
-@input-height-smallscreen: @vr*5;
-@input-padding-y-smallscreen: @vr;
-@input-padding-x-smallscreen: 10px;
+$input-height-smallscreen: $vr*5;
+$input-padding-y-smallscreen: $vr;
+$input-padding-x-smallscreen: 10px;
 
-@input-height: @vr*7;
-@input-padding-y: @vr;
-@input-padding-x: 15px;
+$input-height: $vr*7;
+$input-padding-y: $vr;
+$input-padding-x: 15px;
 
-@input-icon-width: 16px;
+$input-icon-width: 16px;
 
 // Make textarea height behave
 textarea {
@@ -61,8 +27,7 @@ textarea {
 	padding: 0;
 
 	select {
-		.appearance(none);
-
+		appearance: none;
 		background: none;
 		border: 0;
 		box-shadow: none;
@@ -82,6 +47,7 @@ button {
 
 // Search Inputs
 input[type='search'] {
+	appearance: none;
 	-webkit-appearance: none;
 
 	&::-webkit-search-decoration,
@@ -107,7 +73,7 @@ input[type='number'],
 input[type='search'],
 input[type='password'],
 textarea {
-	.appearance(none);
+	appearance: none;
 }
 
 // Inputs within a label
@@ -118,14 +84,14 @@ label select {
 }
 
 textarea {
-	height: @vr*30;
+	height: $vr*30;
 	white-space: normal;
 	overflow: auto;
-	padding: @input-padding-y-smallscreen @input-padding-x-smallscreen;
+	padding: $input-padding-y-smallscreen $input-padding-x-smallscreen;
 
-	@media (min-width: @break-point-d) {
-		padding: @input-padding-y*2 @input-padding-x;
-		height: @vr*30;
+	@media (min-width: $break-point-d) {
+		padding: $input-padding-y*2 $input-padding-x;
+		height: $vr*30;
 	}
 }
 
@@ -136,8 +102,7 @@ textarea {
 	position: relative;
 
 	select {
-		.appearance(none);
-
+		appearance: none;
 		background: none;
 		border: 0;
 		box-shadow: none;
@@ -151,7 +116,7 @@ textarea {
 // radios and checkboxes
 input[type='radio'],
 input[type='checkbox'] {
-	.size(auto);
+	@include size(auto);
 
 	background: none;
 	border: 0;
@@ -168,22 +133,22 @@ input[type='checkbox'] {
 .checkbox {
 	font-size: 12px;
 	display: block;
-	line-height: @vr*3;
-	margin-bottom: @vr;
-	padding-top: @vr*2;
+	line-height: $vr*3;
+	margin-bottom: $vr;
+	padding-top: $vr*2;
 	padding-left: 25px;
 	position: relative;
 
-	@media(min-width: @break-point-e) {
+	@media(min-width: $break-point-e) {
 		font-size: 16px;
-		line-height: @vr*5;
-		padding-top: @vr;
+		line-height: $vr*5;
+		padding-top: $vr;
 	}
 
 	&:first-child {
 
-		@media (min-width: @break-point-d) {
-			margin-top: @vr;
+		@media (min-width: $break-point-d) {
+			margin-top: $vr;
 		}
 	}
 
@@ -206,20 +171,20 @@ input[type='checkbox'] {
 	&.radio-style-b {
 		background-color: #EBEBEB;
 		font-size: 14px;
-		font-weight: @font-weight-medium;
+		font-weight: $font-weight-medium;
 		line-height: normal;
 		margin-top: 0;
 		margin-bottom: 0;
-		padding: @vr*2 5px @vr*2 35px;
+		padding: $vr*2 5px $vr*2 35px;
 		width: 100%;
 
 		.no-js & {
-			padding: @vr*2;
+			padding: $vr*2;
 		}
 
 		.radio-replace {
 			background-color: transparent;
-			border-color: @brand-color-a;
+			border-color: $brand-color-a;
 			left: 10px;
 			top: 12px;
 		}
@@ -247,16 +212,16 @@ input[type='checkbox'] {
 
 .checkbox-replace-input,
 .radio-replace-input {
-	.visually-hidden;
+	@include visually-hidden;
 }
 
 .checkbox-replace,
 .radio-replace {
-	.appearance(none);
-	.size(@vr*4);
+	@include size($vr*4);
 
+	appearance: none;
 	background-color: transparent;
-	border: 2px solid @brand-color-a;
+	border: 2px solid $brand-color-a;
 	cursor: pointer;
 	display: inline-block;
 	line-height: normal;
@@ -275,25 +240,25 @@ input[type='checkbox'] {
 	&:hover,
 	input:focus + &,
 	input:active + & {
-		border-color: @brand-color-b;
+		border-color: $brand-color-b;
 	}
 
 	input[disabled] + & {
 		background: #F0F0F0;
-		border-color: @brand-color-f;
-		color: @brand-color-f;
+		border-color: $brand-color-f;
+		color: $brand-color-f;
 		cursor: not-allowed;
 
 		&:hover,
 		&:focus {
-			border-color: @brand-color-f;
+			border-color: $brand-color-f;
 		}
 	}
 
 	input[disabled] +  & {
 		&:hover,
 		&:focus {
-			border-color: @brand-color-f;
+			border-color: $brand-color-f;
 		}
 	}
 }
@@ -318,8 +283,8 @@ input[type='checkbox'] {
 
 	input:checked + & {
 		color: #fff;
-		background: @brand-color-b;
-		border-color: @brand-color-b;
+		background: $brand-color-b;
+		border-color: $brand-color-b;
 
 		&:after {
 			display: block;
@@ -353,30 +318,30 @@ input[type='checkbox'] {
 
 
 // Input size variations
-@media (min-width: @break-point-d) {
+@media (min-width: $break-point-d) {
 	.input-mini {
-		width: (@gcw*1) + (@ggw*1);
+		width: ($gcw*1) + ($ggw*1);
 	}
 	.input-small {
-		width: (@gcw*2) + (@ggw*1);
+		width: ($gcw*2) + ($ggw*1);
 	}
 	.input-medium {
-		width: (@gcw*3) + (@ggw*2);
+		width: ($gcw*3) + ($ggw*2);
 	}
 	.input-large {
-		width: (@gcw*4) + (@ggw*3);
+		width: ($gcw*4) + ($ggw*3);
 	}
 	.input-xlarge {
-		width: (@gcw*5) + (@ggw*4);
+		width: ($gcw*5) + ($ggw*4);
 	}
 	.input-xxlarge {
-		width: (@gcw*6) + (@ggw*5);
+		width: ($gcw*6) + ($ggw*5);
 	}
 	.input-xxxlarge {
-		width: (@gcw*7) + (@ggw*6);
+		width: ($gcw*7) + ($ggw*6);
 	}
 	.input-xxxxlarge {
-		width: (@gcw*8) + (@ggw*7);
+		width: ($gcw*8) + ($ggw*7);
 		max-width: 90%;
 	}
 }
@@ -401,9 +366,9 @@ input[type='file'] {
 }
 
 .form-actions {
-	margin-top: @vr*2;
+	margin-top: $vr*2;
 
 	.btn {
-		margin-bottom: @vr;
+		margin-bottom: $vr;
 	}
 }

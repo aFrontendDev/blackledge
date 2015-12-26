@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 
-.placeholder(#999);
+@include placeholder(#999);
 
 html {
 	font-size: 100%;
@@ -23,10 +23,10 @@ html {
 }
 
 body {
-	color: @color-text;
-	font-family: @font-family-base;
-	font-weight: @font-weight-regular;
-	line-height: @line-height-base;
+	color: $color-text;
+	font-family: $font-family-base;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-base;
 }
 
 img {
@@ -49,7 +49,7 @@ img {
 	}
 
 	> div {
-		.size(100%);
+		@include size(100%);
 
 		position: relative;
 	}
@@ -85,7 +85,7 @@ img {
 		}
 
 		.block {
-			background: @brand-color-a;
+			background: $brand-color-a;
 			opacity: 0.1;
 		}
 	}
@@ -94,18 +94,18 @@ img {
 .visible-grid-btn {
 	display: block;
 	position: fixed;
-	bottom: @vr*3;
-	left: @vr*3;
+	bottom: $vr*3;
+	left: $vr*3;
 	z-index: 1002;
 }
 
 .title-stylesheet {
 	border-bottom: 1px solid #CCC;
 	font-size: 40px;
-	line-height: @vr*5;
-	margin-bottom: @vr*2;
-	padding-top: @vr*6;
-	padding-bottom: @vr*2;
+	line-height: $vr*5;
+	margin-bottom: $vr*2;
+	padding-top: $vr*6;
+	padding-bottom: $vr*2;
 	text-align: left;
 
 	&:first-child {
@@ -117,10 +117,10 @@ img {
 	border-bottom: 1px solid #CCC;
 	color: #BBB;
 	font-size: 18px;
-	line-height: @vr*4;
-	margin-bottom: @vr*4;
-	padding-top: @vr*6;
-	padding-bottom: @vr*2;
+	line-height: $vr*4;
+	margin-bottom: $vr*4;
+	padding-top: $vr*6;
+	padding-bottom: $vr*2;
 	text-align: left;
 
 	&:first-child {
@@ -132,8 +132,8 @@ img {
 .codeblock-stylesheet {
 	border: 1px solid #CCC;
 	font-size: 12px;
-	margin: 0 0 @vr*4;
-	padding: @vr @vr*2;
+	margin: 0 0 $vr*4;
+	padding: $vr $vr*2;
 }
 
 .scroll-to-demo {

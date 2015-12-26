@@ -1,11 +1,13 @@
 language: node_js
 node_js:
 - '0.10'
-- 'iojs'
 before_install:
+- gem install sass
 - npm install -g bower
 - npm install -g grunt-cli
 before_script:
-- bower install
+- bower install --force
 script:
 - npm test
+env:
+- SASS_PATH=.

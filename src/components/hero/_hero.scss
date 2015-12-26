@@ -3,7 +3,7 @@
 // global
 .hero {
 	background: #CCC; // default color
-	margin-bottom: @ggw;
+	margin-bottom: $ggw;
 	position: relative;
 
 	img {
@@ -21,8 +21,8 @@
 	width: 80%;
 	z-index: 3;
 
-	@media @BPD {
-		padding: @vr*4 0;
+	@media (min-width: $break-point-d) {
+		padding: $vr*4 0;
 		width: 50%;
 	}
 }
@@ -43,23 +43,19 @@
 
 // themes
 .hero-style-a {
-	.randomColor(); // for dev purposes - theme according to your needs
-	background: @color;
+	background: $brand-color-a;
 }
 
 .hero-style-b {
-	.randomColor();
-	background: @color;
+	background: $brand-color-b;
 }
 
 .hero-style-c {
-	.randomColor();
-	background: @color;
+	background: $brand-color-c;
 }
 
 .hero-style-d {
-	.randomColor();
-	background: @color;
+	background: $brand-color-d;
 }
 
 
@@ -72,7 +68,8 @@
 	&.hero-with-fallback {
 		video {
 			display: none;
-			@media @BPC {
+
+			@media (min-width: $break-point-c) {
 				display: block;
 			}
 		}
@@ -83,7 +80,7 @@
 		width: 100%;
 		z-index: 1;
 
-		@media @BPC {
+		@media (min-width: $break-point-c) {
 			display: block;
 		}
 	}
@@ -97,13 +94,13 @@
 
 	[itemprop=transcript] {
 		// metadata
-		.visually-hidden;
+		@include visually-hidden;
 	}
 }
 
 .hero-with-fallback {
 	.hero-video-poster {
-		@media @BPC {
+		@media (min-width: $break-point-c) {
 			.video & {
 				// <html>
 				display: none;
@@ -159,9 +156,9 @@
 
 .hero-video-icon {
 	// <a>
-	.size(100px);
+	@include size(100px);
 
-	background-color: @brand-color-a;
+	background-color: $brand-color-a;
 	border-radius: 50%;
 	display: table;
 	opacity: 1;
@@ -177,7 +174,7 @@
 		transform: translateY(-50%);
 	}
 
-	.@{icon-prefix} {
+	.icon {
 		color: #FFF;
 		display: table-cell;
 		font-size: 60px;
@@ -185,7 +182,7 @@
 	}
 
 	span {
-		.visually-hidden;
+		@include visually-hidden;
 	}
 
 	&.hero-video-icon-play {
@@ -211,7 +208,7 @@
 	width: 100%;
 
 	.hero-video-replace {
-		.size(100%);
+		@include size(100%);
 
 		position: absolute;
 		top: 0;

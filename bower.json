@@ -5,7 +5,7 @@
   "homepage": "https://github.com/furzeface/blackledge#readme",
   "authors": [
     "Daniel Furze <daniel@furzeface.com>",
-		"Andrew 'The Ledge' Blackledge <blackledge22@gmail.com>"
+    "Andrew 'The Ledge' Blackledge <blackledge22@gmail.com>"
   ],
   "license": "http://danielfurze.mit-license.org",
   "ignore": [
@@ -18,7 +18,7 @@
     "jquery": "1.11.1",
     "jquery-tiny-pubsub": "~0.7.0",
     "modernizr": "~2.8.2",
-    "normalize-less": "*",
+    "normalize-scss": "~3.0.3",
     "OwlCarousel": "https://github.com/smashingboxes/OwlCarousel2.git",
     "picturefill": "~2.3.1",
     "jquery-smartresize": "*",
@@ -38,8 +38,8 @@
     "modernizr": [
       "modernizr.js"
     ],
-    "normalize-less": [
-      "normalize.less"
+    "normalize-scss": [
+      "_normalize.scss"
     ]
   }
 }
