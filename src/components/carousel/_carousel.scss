@@ -6,14 +6,14 @@
 
 // customisation of the owl carousel plugin
 
-@nav-icon-size: 20px;
+$nav-icon-size: 20px;
 
-.owl-carousel .cloned img{
+.owl-carousel .cloned img {
 	height: 1px; // IE bug fix
 }
 
 .owl-nav {
-	.vertically-centered;
+	@include vertically-centered;
 
 	height: 20px;
 	text-align: center;
@@ -23,10 +23,10 @@
 
 .owl-prev,
 .owl-next {
-	.size(@nav-icon-size);
+	@include size($nav-icon-size);
 
 	cursor: pointer;
-	font-size: @nav-icon-size;
+	font-size: $nav-icon-size;
 	position: absolute;
 
 	&:hover {
@@ -35,11 +35,11 @@
 }
 
 .owl-prev {
-	left: @nav-icon-size;
+	left: $nav-icon-size;
 }
 
 .owl-next {
-	right: @nav-icon-size;
+	right: $nav-icon-size;
 }
 
 .owl-dots {
@@ -64,7 +64,7 @@
 		width: 16px;
 
 		&::after {
-			.size(6px);
+			@include size(6px);
 
 			background: $color-text;
 			border-radius: 50%;
