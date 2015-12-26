@@ -1,11 +1,12 @@
 # Contributing [![Stories in Ready][waffle-image]][waffle-url]
 
 - [Forking and branching](#forking-and-branching)
+- [Discussing Issues](#discussing-issues)
 - [Commit messages](#commit-messages)
-- [Issues](#issues-)
+- [Issues](#issues)
 - [Contributors](#contributors)
 
-## Issues
+## Discussing Issues
 If you have a suggestion or a bug fix, please [create an issue](https://github.com/furzeface/blackledge/issues/new) so we can discuss it.
 
 ## Forking and branching
