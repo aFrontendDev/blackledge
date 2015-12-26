@@ -9,3 +9,5 @@ before_script:
 - bower install --force
 script:
 - npm test
+env:
+- SASS_PATH=.
