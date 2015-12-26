@@ -116,9 +116,9 @@
 
 
 // //////////////////
-// placeholders, refactor into own file
+// should be a placeholder, refactor into own file
 //
-%reset-button {
+@mixin reset-button() {
 	background: none;
 	border: 0;
 	padding: 0;

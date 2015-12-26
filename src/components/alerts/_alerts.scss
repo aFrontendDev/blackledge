@@ -26,13 +26,13 @@ $color-error: #CC2000;
 .alerts-inner {
 	position: relative;
 
-	@media @BPD {
-		margin:0 @ggw/2;
+	@media (min-width: $break-point-b) {
+		margin:0 $ggw/2;
 		max-width: 950px;
 		padding-bottom: $vr*3;
 	}
 
-	@media @BPE {
+	@media (min-width: $break-point-e) {
 		margin: 0 auto;
 	}
 }
@@ -51,12 +51,12 @@ $color-error: #CC2000;
 	position: relative;
 	margin: $vr;
 	min-height: $vr*13;
-	padding: $vr*3 @ggw*2 $vr*3 @ggw*2;
+	padding: $vr*3 $ggw*2 $vr*3 $ggw*2;
 	z-index: 1001;
 
-	@media @BPD {
+	@media (min-width: $break-point-d) {
 		margin: 0;
-		padding: $vr*2 @ggw*2 $vr*2 @ggw*2;
+		padding: $vr*2 $ggw*2 $vr*2 $ggw*2;
 	}
 
 	.alert + & {
@@ -99,7 +99,7 @@ $color-error: #CC2000;
 		}
 	}
 
-	.@{icon-prefix} {
+	.icon {
 		font-size: $vr*4;
 	}
 }
@@ -119,7 +119,6 @@ $color-error: #CC2000;
 
 .alert-notice {
 	.alert-dismiss {
-		color: #5693f9;
 		color: $color-info;
 	}
 }
@@ -132,17 +131,16 @@ $color-error: #CC2000;
 
 .alert-dismiss {
 	// <button>
-	.reset-button();
+	@include reset-button;
 
 	color: #000;
-	// cursor: pointer;
 	font-size: 18px;
 	line-height: $vr*5;
 	position: absolute;
 	top: $vr*2;
 	right: 15px;
 
-	@media @BPD {
+	@media (min-width: $break-point-d) {
 		top: $vr*2;
 		right: 15px;
 	}
@@ -154,7 +152,7 @@ $color-error: #CC2000;
 	margin-top: 0;
 	margin-bottom: $vr;
 
-	@media @BPD {
+	@media (min-width: $break-point-d) {
 		font-size: 18px;
 		line-height: $vr*5;
 		margin-bottom: 0;
@@ -165,7 +163,7 @@ $color-error: #CC2000;
 	font-size: 14px;
 	line-height: $vr*3;
 
-	@media @BPD {
+	@media (min-width: $break-point-d) {
 		font-size: 16px;
 		line-height: $vr*4;
 	}

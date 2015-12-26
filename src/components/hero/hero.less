@@ -3,7 +3,7 @@
 // global
 .hero {
 	background: #CCC; // default color
-	margin-bottom: @ggw;
+	margin-bottom: $ggw;
 	position: relative;
 
 	img {
@@ -21,7 +21,7 @@
 	width: 80%;
 	z-index: 3;
 
-	@media @BPD {
+	@media (min-width: $break-point-d) {
 		padding: $vr*4 0;
 		width: 50%;
 	}
@@ -177,7 +177,7 @@
 		transform: translateY(-50%);
 	}
 
-	.@{icon-prefix} {
+	.icon {
 		color: #FFF;
 		display: table-cell;
 		font-size: 60px;
