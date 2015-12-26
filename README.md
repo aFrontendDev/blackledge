@@ -47,6 +47,9 @@ Todo.
 ## Testing
 Todo.
 
+## License
+Code licensed under the [MIT license](http://danielfurze.mit-license.org).
+
 
 [travis-url]: https://travis-ci.org/furzeface/blackledge
 [travis-image]: https://travis-ci.org/furzeface/blackledge.svg?branch=master
