@@ -16,7 +16,6 @@
 	- [ ] [less](https://github.com/plus3network/gulp-less)
 	- [ ] [**sass**](https://www.npmjs.com/package/gulp-sass)
 	- [ ] [**postcss**](https://www.npmjs.com/package/postcss)
-	- [ ] [stripmq](https://github.com/jtangelder/gulp-stripmq) - [postcss](https://www.npmjs.com/package/postcss-unmq)
 	- [ ] px_to_rem - postcss
 	- [ ] autoprefixer - postcss
 	- [ ] combine_mq - postcss?

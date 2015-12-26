@@ -41,7 +41,6 @@ module.exports = function(grunt) {
 			distStyles: '_styles',
 			distTemp: 'temp',
 			mainCss: 'main.css',
-			ieCss: 'ie.css',
 			// Project settings
 			assembleExt: 'hbs',
 			helpers: 'helpers',
@@ -141,7 +140,6 @@ module.exports = function(grunt) {
 				scripts: '<%= config.distScripts %>',
 				temp: '<%= config.distTemp %>',
 				mainCss: '<%= config.mainCss %>',
-				ieCss: '<%= config.ieCss %>',
 				data: [
 					'<%= config.src %>/components/**/*.json',
 					'package.json',
@@ -239,17 +237,8 @@ module.exports = function(grunt) {
 				],
 				dest: '<%= config.dist %>/<%= config.distScripts %>/scripts.js'
 			},
-			ieScripts: {
-				src: [
-					// Add 3rd party Bower components here using <%= config.bower %>/**/*.js
-					'<%= config.bower %>/nwmatcher/src/nwmatcher.js',
-					'<%= config.bower %>/selectivizr/selectivizr.js'
-				],
-				dest: '<%= config.dist %>/<%= config.distScripts %>/ie.js'
-			},
 			validation: {
 				src: [
-					// @todo: jquery validation as component - just double check the component is all working first though.
 					'<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/<%= config.srcPlugins %>/validation/*.js'
 				],
 				dest: '<%= config.dist %>/<%= config.distScripts %>/validation.js'
@@ -271,10 +260,6 @@ module.exports = function(grunt) {
 			scripts: {
 				src: '<%= config.dist %>/<%= config.distScripts %>/scripts.js',
 				dest: '<%= config.dist %>/<%= config.distScripts %>/scripts.js'
-			},
-			ieScripts: {
-				src: '<%= config.dist %>/<%= config.distScripts %>/ie.js',
-				dest: '<%= config.dist %>/<%= config.distScripts %>/ie.js'
 			}
 		},
 
@@ -283,14 +268,6 @@ module.exports = function(grunt) {
 			main: {
 				files: {
 					'<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>': '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.mainLess %>'
-				}
-			}
-		},
-
-		stripmq: {
-			ie: {
-				files: {
-					'<%= config.dist %>/<%= config.distStyles %>/<%= config.ieCss %>': '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>'
 				}
 			}
 		},
@@ -315,21 +292,13 @@ module.exports = function(grunt) {
 		autoprefixer: {
 			options: {
 				browsers: [
-					'last 3 version',
-					'ie 8',
-					'ie 9'
+					'last 2 version'
 				]
 			},
 			main: {
 				expand: true,
 				flatten: true,
 				src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>',
-				dest: '<%= config.dist %>/<%= config.distStyles %>/'
-			},
-			ie: {
-				expand: true,
-				flatten: true,
-				src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.ieCss %>',
 				dest: '<%= config.dist %>/<%= config.distStyles %>/'
 			}
 		},
@@ -346,16 +315,11 @@ module.exports = function(grunt) {
 		cssmin: {
 			options: {
 				advanced: false,
-				rebase: false,
-				compatibility: 'ie8'
+				rebase: false
 			},
 			main: {
 				src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>',
 				dest: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>'
-			},
-			ie: {
-				src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.ieCss %>',
-				dest: '<%= config.dist %>/<%= config.distStyles %>/<%= config.ieCss %>'
 			}
 		},
 
@@ -520,14 +484,12 @@ module.exports = function(grunt) {
 		'jshint',
 		'concat:jquery',
 		'concat:scripts',
-		'concat:ieScripts',
 		'concat:validation',
 		'copy:scripts'
 	]);
 	grunt.registerTask('build_styles', [
 		'concat:lessMixins',
 		'less',
-		'stripmq',
 		'autoprefixer',
 		'px_to_rem',
 		'combine_mq',

@@ -63,7 +63,6 @@
     "grunt-preen": "^1.2.0",
     "grunt-prettify": "^0.4.0",
     "grunt-px-to-rem": "^0.4.0",
-    "grunt-stripmq": "0.0.6",
     "handlebars-helpers": "^0.5.8",
     "jshint-stylish": "^2.1.0",
     "load-grunt-tasks": "^3.0.0",
