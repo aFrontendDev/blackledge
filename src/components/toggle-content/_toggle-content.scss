@@ -1,7 +1,5 @@
 // Toggle
 
-// toggle.less
-
 .toggle-out {
 	display: none;
 }
@@ -52,7 +50,7 @@
 	}
 
 	.toggle-smallscreen & {
-		@media @BPD {
+		@media (min-width: $break-point-d) {
 			display: block;
 		}
 	}
