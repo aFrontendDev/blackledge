@@ -1,6 +1,7 @@
 # Contributing [![Stories in Ready][waffle-image]][waffle-url]
 
 - [Forking and branching](#forking-and-branching)
+- [Commit messages](#commit-messages)
 - [Issues](#issues-)
 - [Contributors](#contributors)
 
@@ -25,6 +26,15 @@ git push --set-upstream origin feature/MY-FEATURE
 ```
 
 Then submit a [Pull Request](https://github.com/furzeface/blackledge/compare) for review and merging by a project owner.
+
+## Commit messages
+Try and adhere as closely as possible to the [Angular commit messages guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines). 
+
+[Commitizen](https://github.com/commitizen/cz-cli) is a command line tool which can help with this:
+```sh
+npm install -g commitizen
+```
+Now, simply use `git cz` instead of `git commit` when committing.
 
 ## Issues [![Stories in Ready][waffle-image]][waffle-url]
 Check out the issues in _Ready_ on the [Waffle board](https://waffle.io/furzeface/blackledge) and work away! 
