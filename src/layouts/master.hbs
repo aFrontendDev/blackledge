@@ -14,13 +14,8 @@ title: Master Page
 <head>
 	{{#block "master-head"}}
 	{{>head-meta}}
-	{{>head-app}}
 	{{>head-icons}}
-	{{#if rtl}}
-	{{>head-css-rtl}}
-	{{else}}
 	{{>head-css}}
-	{{/if}}
 	{{>head-fonts}}
 	{{>head-scripts}}
 	{{/block}}
@@ -30,10 +25,32 @@ title: Master Page
 	{{>header}}
 	{{/if}}
 	<div id="page" class="page{{#if pageClass}} {{pageClass}}{{/if}}">
-		{{#block "master-body"}}
-		{{body}}
-		{{/block}}
-		{{!-- {{>footer}} --}}
+		{{#if "features-top"}}
+		{{#block "features-top"}}{{/block}}
+		{{/if}}
+		<main class="main" id="main" role="main">
+			{{#if "sections-top"}}
+			{{#block "sections-top"}}{{/block}}
+			{{/if}}
+			{{#if "region-a"}}
+			<div class="layout layout-a">
+				{{body}}
+				{{#if "region-a"}}
+				<div class="region region-a">
+					<div class="region-inner">
+						{{#block "region-a"}}{{/block}}
+					</div>
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+			{{#if "sections-bottom"}}
+			{{#block "sections-bottom"}}{{/block}}
+			{{/if}}
+		</main>
+		{{#if "features-bottom"}}
+		{{#block "features-bottom"}}{{/block}}
+		{{/if}}
 	</div>
 	{{#if visibleGrid}}
 	{{>grid}}
