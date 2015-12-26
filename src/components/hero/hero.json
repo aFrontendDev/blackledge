@@ -61,11 +61,11 @@
 				"preload": true,
 				"srcs": [
 					{
-						"src": "video/BB_Ambient.webm",
+						"src": "video/small.webm",
 						"type": "video/webm"
 					},
 					{
-						"src": "video/BB_Ambient.mp4",
+						"src": "video/small.mp4",
 						"type": "video/mp4"
 					}
 				],
