@@ -1,13 +1,13 @@
 ---
 hide: true
 title: File List
-layout: src/layouts/_bb.hbs
+layout: src/layouts/_base.hbs
 ---
 
 <div class="container">
 	<header class="header" role="banner">
 		<figure class="logo">
-			<img src="{{assets}}/_bb/logo.png" alt="Blackledge Component Framework" />
+			<img src="{{{assets}}}/_base/logo.png" alt="{{{package.name}}}" />
 		</figure>
 		<h1 class="project-title">
 			{{{package.name}}} {{{package.version}}}
@@ -22,7 +22,7 @@ layout: src/layouts/_bb.hbs
 			{{#withSort pages "filename"}}
 				{{#unless data.hide}}
 					<li class="file">
-						<a href="{{relative dest this.dest}}">{{filename}}</a>
+						<a href="{{relative dest this.dest}}">{{{filename}}}</a>
 					</li>
 				{{/unless}}
 			{{/withSort}}
