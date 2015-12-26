@@ -17,7 +17,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	transition: all @modal-speed/2;
+	transition: all $modal-speed/2;
 	visibility: hidden;
 	z-index: 1000;
 
