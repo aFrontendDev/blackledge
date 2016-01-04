@@ -1,6 +1,7 @@
 {
+	"private": true,
   "name": "blackledge",
-  "version": "1.0.1",
+  "version": "2.1.0",
   "description": "Generic, reusable front end component framework.",
   "homepage": "https://github.com/furzeface/blackledge#readme",
   "authors": [
@@ -14,23 +15,32 @@
     "node_modules"
   ],
   "devDependencies": {
+    "conformity": "~0.2.3",
     "console-polyfill": "~0.1.2",
+    "fitvids": "~1.1.0",
     "jquery": "1.11.1",
+    "jquery-smartresize": "*",
     "jquery-tiny-pubsub": "~0.7.0",
     "modernizr": "~2.8.2",
     "normalize-scss": "~3.0.3",
     "OwlCarousel": "https://github.com/smashingboxes/OwlCarousel2.git",
-    "picturefill": "~2.3.1",
-    "jquery-smartresize": "*",
-    "conformity": "~0.2.3",
-    "fitvids": "~1.1.0"
+    "picturefill": "~2.3.1"
   },
   "preen": {
+  	"conformity": [
+  		"dist/conformity.min.js"
+  	],
     "console-polyfill": [
       "*.js"
     ],
+    "fitvids": [
+    	"*.js"
+    ],
     "jquery": [
       "dist/*.{js,map}"
+    ],
+    "jquery-smartresize": [
+    	"*.js"
     ],
     "jquery-tiny-pubsub": [
       "dist/*.min.js"
@@ -40,6 +50,12 @@
     ],
     "normalize-scss": [
       "_normalize.scss"
+    ],
+    "OwlCarousel": [
+    "src/js/*.js"
+    ],
+    "picturefill": [
+    	"dist/*.min.js"
     ]
   }
 }
