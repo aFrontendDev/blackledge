@@ -1,9 +1,13 @@
 # Contributing [![Stories in Ready][waffle-image]][waffle-url]
 
 - [Forking and branching](#forking-and-branching)
+- [Discussing Issues](#discussing-issues)
 - [Commit messages](#commit-messages)
 - [Issues](#issues-)
 - [Contributors](#contributors)
+
+## Discussing Issues
+If you have a suggestion or a bug fix, please [create an issue](https://github.com/furzeface/blackledge/issues/new) so we can discuss it.
 
 ## Forking and branching
 Fork the project then create a neew branch to work on using [git flow](http://nvie.com/posts/a-successful-git-branching-model).

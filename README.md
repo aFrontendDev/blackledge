@@ -18,10 +18,20 @@ grunt serve
 See [contributing.md](contributing.md).
 
 ## Documentation
-_Todo._
+Hit `/docs/jsdocs/` from the served static site to view [JSDocs](http://usejsdoc.org).
+_Todo - more._
 
 ## Testing
 _Todo._
+
+## Browser support
+This component framework is built and dev tested in the latest versions of Chrome and Firefox. At some point it will be tested in Edge and Internet Explorer latest. 
+
+It is built mobile-first and so is tested at various breakpoints and screen sizes - but actual device testing is scheduled for a later, more stable release.
+
+It does not fully support Internet Explorer versions less than 10, most *definitely not* IE8. 
+
+Suggestions and pull requests are welcome on supporting these legacy browsers but the main project focus won’t be to do this.
 
 ## License
 Code licensed under the [MIT license](http://danielfurze.mit-license.org).
