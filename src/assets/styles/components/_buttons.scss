@@ -1,13 +1,4 @@
-// Buttons
-//
-// Button styles can be applied to anything with the `.btn` class applied.
-// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
-//
-// Styleguide 4
-//
-
-// buttons at smallscreen are reduced by one size (to a minimum of *-small)
-// e.g .btn below 768px uses *-small units, .btn-large uses *-default... but .btn-small still uses *-small
+// buttons
 
 input::-moz-focus-inner {
 	border: 0;
@@ -100,7 +91,7 @@ button::-moz-focus-inner {
 	}
 }
 
-// Themes
+// themes
 .btn-style-a {
 	background-color: $brand-color-a;
 	border-color: $brand-color-a;

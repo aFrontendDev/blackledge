@@ -1,4 +1,4 @@
-// utilities.less
+// utilities
 
 .right {
 	float: right;
@@ -72,4 +72,44 @@
 .no-transition,
 .no-transition * {
 	transition: none!important;
+}
+
+// utilities-responsive
+
+.visible-smallscreen,
+.visible-mediumscreen,
+.visible-largescreen {
+	display: none;
+}
+
+.visible-smallscreen {
+	display: block;
+}
+
+.visible-mediumscreen {
+
+	@media (min-width: $break-point-d) {
+    	display: block;
+  	}
+}
+
+.visible-largescreen {
+
+	@media (min-width: $break-point-e) {
+		display: block;
+  	}
+}
+
+.hidden-mediumscreen {
+
+	@media (min-width: $break-point-d) {
+    	display: none;
+  	}
+}
+
+.hidden-largescreen {
+
+	@media (min-width: $break-point-e) {
+    	display: none;
+  	}
 }
