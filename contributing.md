@@ -10,7 +10,7 @@
 If you have a suggestion or a bug fix, please [create an issue](https://github.com/furzeface/blackledge/issues/new) so we can discuss it.
 
 ## Forking and branching
-Fork the project then create a neew branch to work on using [git flow](http://nvie.com/posts/a-successful-git-branching-model).
+Fork the project then create a new branch to work on using [git flow](http://nvie.com/posts/a-successful-git-branching-model).
 
 ### Git flow
 For a quick guide to using git flow, see [my blog post](http://furzeface.com/blog/git-flow-aint-scary) on the subject.
