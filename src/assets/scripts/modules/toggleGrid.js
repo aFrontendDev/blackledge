@@ -2,30 +2,29 @@
  * @file Toggle grid
  * @author {@link http://building-blocks.com Building Blocks}
  */
-var bb = bb ? bb : {};
-(function($) {
-	$.extend(bb, {
-		toggleGrid: function($object) {
-			var self = this,
-				$visibleGrid = $('.visible-grid');
+var bb = bb ? bb : {}(function ($) {
+  $.extend(bb, {
+    toggleGrid: function ($object) {
+      var self = this,
+        $visibleGrid = $('.visible-grid')
 
-			if (!$visibleGrid.length) {
-				return;
-			}
+      if (!$visibleGrid.length) {
+        return
+      }
 
-			var $btn = $('<button />', {
-				'type': 'button',
-				'class': 'visible-grid-btn btn btn-style-a btn-small'
-			}).text('Toggle Grid');
+      var $btn = $('<button />', {
+        'type': 'button',
+        'class': 'visible-grid-btn btn btn-style-a btn-small'
+      }).text('Toggle Grid')
 
-			bb.settings.$body.append($btn);
+      bb.settings.$body.append($btn)
 
-			$btn.on('click', function(event) {
-				bb.settings.$body.toggleClass('visible-grid');
-			});
-		}
-	});
-	$.subscribe('pageReady', function() {
-		bb.toggleGrid();
-	});
-}(jQuery));
+      $btn.on('click', function (event) {
+        bb.settings.$body.toggleClass('visible-grid')
+      })
+    }
+  })
+  $.subscribe('pageReady', function () {
+    bb.toggleGrid()
+  })
+}(jQuery))
