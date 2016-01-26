@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "metalsmith-in-place": {
+      "engine": "handlebars",
+      "partials": "./source/partials"
+    }
+  }
+}

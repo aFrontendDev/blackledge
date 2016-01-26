@@ -126,7 +126,7 @@ module.exports = function (grunt) {
         mainCss: '<%= config.mainCss %>',
         data: [
           '<%= config.src %>/components/**/*.json',
-          'package.json',
+          'package.json'
         ],
         timestamp: '<%= grunt.template.today("mmm dS yyyy, h:MMtt Z") %>',
         copyrightYear: '<%= grunt.template.today("yyyy") %>'
@@ -142,8 +142,8 @@ module.exports = function (grunt) {
             if (src.substring(0, 1) === '_') {
               filename = dest + src.substring(1)
             } else if (src.indexOf('/') !== -1) {
-              var index = null,
-                splitSrc = src.split('/')
+              var index = null
+              var splitSrc = src.split('/')
               filename = dest
               for (index = 0; index < splitSrc.length; ++index) {
                 filename = filename + splitSrc[index]
@@ -276,76 +276,6 @@ module.exports = function (grunt) {
         src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>',
         dest: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>'
       }
-    },
-
-    // Misc tasks
-    copy: {
-      base: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.src %>/<%= config.srcAssets %>/_base/',
-          src: ['**'],
-          dest: '<%= config.dist %>/_base'
-        }]
-      },
-      assets: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcImages %>/',
-          src: ['**'],
-          dest: '<%= config.dist %>/<%= config.distImages %>/'
-        }, {
-          expand: true,
-          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcVideo %>/',
-          src: ['**'],
-          dest: '<%= config.dist %>/<%= config.distVideo %>/'
-        }, {
-          expand: true,
-          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcFonts %>/',
-          src: ['**'],
-          dest: '<%= config.dist %>/<%= config.distStyles %>/<%= config.distFonts %>/'
-        }, {
-          expand: true,
-          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcTemp %>/',
-          src: ['**'],
-          dest: '<%= config.dist %>/<%= config.distTemp %>/'
-        }]
-      },
-      scripts: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/<%= config.srcPlugins %>',
-          src: ['*.js'],
-          dest: '<%= config.dist %>/<%= config.distScripts %>/'
-        }]
-      },
-      deploy: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.dist %>/',
-          src: ['**'],
-          dest: "<%= grunt.option('dest') %>"
-        }]
-      }
-    },
-
-    clean: {
-      production: [
-        '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>.map'
-      ],
-      html: [
-        '<%= config.dist %>/*.html'
-      ],
-      scripts: [
-        '<%= config.dist %>/<%= config.distScripts %>'
-      ],
-      styles: [
-        '<%= config.dist %>/<%= config.distStyles %>'
-      ],
-      everything: [
-        '<%= config.dist %>'
-      ],
-      deploy: []
     }
   })
 

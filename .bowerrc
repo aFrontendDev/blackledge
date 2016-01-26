@@ -3,6 +3,6 @@
     "private": true,
   	"interactive": false,
   	"scripts": {
-  		"postinstall": "grunt preen"
+  		"postinstall": "gulp preen"
   	}
 }

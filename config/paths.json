@@ -1,0 +1,26 @@
+{
+  "dist": {
+    "base": "./dist",
+    "styles": "./dist/_styles",
+    "scripts": "./dist/_scripts",
+    "images": "./dist/images",
+    "fonts": "./dist/fonts",
+    "video": "./dist/video",
+    "temp": "./dist/temp"
+  },
+  "source": {
+    "base": "./src/",
+    "assets": "./src/assets",
+    "styles": "./src/assets/styles",
+    "scripts": "./src/assets/scripts",
+    "images": "./src/assets/images",
+    "fonts": "./src/assets/fonts",
+    "temp": "./src/assets/temp",
+    "video": "./src/assets/video",
+    "pages": "./src/pages",
+    "partials": "./src/components"
+  },
+  "test": {
+    "backstopGulpfile": "./node_modules/backstopjs/gulpfile.js"
+  }
+}
