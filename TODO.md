@@ -1,21 +1,25 @@
 # TODO
 
 - [ ] [Gulp version](https://github.com/furzeface/blackledge/issues/9)
-	- [x] clean - [del](https://www.npmjs.com/package/del) instead
+	- [x] clean - [del](https://www.npmjs.com/package/del)
 	- [x] [copy](https://www.npmjs.com/package/gulp-copy)
+		- [ ] doesn’t work
 	- [ ] watch
 	- [x] serve
 	- [ ] metalsmith
-	- [ ] standardJS
-	- [ ] concat
-	- [ ] uglify
-	- [ ] [**sass**](https://www.npmjs.com/package/gulp-sass)
-	- [ ] [**postcss**](https://www.npmjs.com/package/postcss)
-	- [ ] px_to_rem - postcss
-	- [ ] autoprefixer - postcss
-	- [ ] combine_mq - postcss
-	- [ ] cssmin - postcss
-	- [ ] stylelint
-	- [ ] [htmlmin](https://www.npmjs.com/package/gulp-htmlmin)
-	- [ ] JSDoc
+	- [x] standardJS
+	- [x] concat
+	- [x] uglify
+	- [x] [**sass**](https://www.npmjs.com/package/gulp-sass)
+	- [x] [**postcss**](https://www.npmjs.com/package/postcss)
+	- [x] px_to_rem - postcss
+	- [x] autoprefixer - postcss
+	- [x] mqPacker - postcss
+	- [x] cssmin - postcss
+	- [x] uncss - postcss 
+		- [ ] put back in when HTML task is done
+	- [x] stylelint
+		- [x] fix stylelint errors
+	- [x] [htmlmin](https://www.npmjs.com/package/gulp-htmlmin)
+	- [x] JSDoc
 	- [x] Preen

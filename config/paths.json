@@ -1,6 +1,10 @@
 {
   "dist": {
     "base": "./dist",
+    "docs": {
+    	"base": "./dist/docs/",
+    	"jsdocs": "./dist/docs/jsdocs"
+    },
     "styles": "./dist/_styles",
     "scripts": "./dist/_scripts",
     "images": "./dist/images",

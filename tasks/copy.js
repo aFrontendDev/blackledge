@@ -19,9 +19,9 @@ module.exports = function (gulp, config) {
 
   gulp.task('copy:images', () => {
     return gulp.src([
-      config.paths.source.images + '**/*'
+      config.paths.source.images + '**/*.png'
     ])
-      .pipe(gulp.dest(config.paths.dist.images))
+      .pipe(gulp.dest(config.paths.dist.base))
   })
 
   gulp.task('copy:temp', () => {

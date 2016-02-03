@@ -1,5 +1,5 @@
 /**
- * @file clean.js - Wipe dist directory with Gulp task
+ * @file clean.js - Wipe directories with Gulp task
  * @version 1.0.0
  * @author Daniel Furze <daniel@furzeface.com>
  */
@@ -13,5 +13,11 @@ module.exports = function (gulp, config, argv) {
         config.paths.dist.base
       ])
     }
+  })
+
+  gulp.task('clean:docs', () => {
+    return del([
+      config.paths.dist.docs.base
+    ])
   })
 }

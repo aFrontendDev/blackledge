@@ -11,7 +11,6 @@ import Metalsmith from 'metalsmith'
 import handlebars from 'handlebars'
 import layouts from 'handlebars-layouts'
 import rename from 'metalsmith-rename'
-import permalinks from 'metalsmith-permalinks'
 
 import htmlmin from 'gulp-htmlmin'
 
@@ -36,10 +35,6 @@ module.exports = function (gulp, config, argv) {
       [/\.hbs$/, '.html'],
       [/\.md$/, '.html']
     ]))
-
-    metal.use(permalinks({
-      pattern: ':directory/:page'
-    }))
 
     metal.build(function (err) {
       if (err) {

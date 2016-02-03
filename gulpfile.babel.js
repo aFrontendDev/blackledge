@@ -62,10 +62,19 @@ gulp.task('watch', () => {
 
 gulp.task('copy:assets', callback => {
   runSeq(
+    'copy:base',
     'copy:fonts',
     'copy:images',
     'copy:temp',
     'copy:video',
+    callback
+  )
+})
+
+gulp.task('docs', callback => {
+  runSeq(
+    'clean:docs',
+    'jsdocs',
     callback
   )
 })
@@ -98,6 +107,7 @@ gulp.task('test', callback => {
 gulp.task('default', callback => {
   runSeq(
     'clean',
+    'copy:assets',
     'metalsmith',
     ['copy:images', 'styles', 'scripts'],
     'htmlmin',

@@ -1,6 +1,7 @@
 // forms
 
 // Forms specific variables
+
 $input-border-width: 1px;
 
 $input-height-smallscreen: $vr*5;
@@ -13,7 +14,6 @@ $input-padding-x: 15px;
 
 $input-icon-width: 16px;
 
-// Make textarea height behave
 textarea {
 	height: auto;
 	overflow: auto;
@@ -21,10 +21,11 @@ textarea {
 }
 
 //  Fake <select>
+
 .select-replace {
 	display: block;
-	position: relative;
 	padding: 0;
+	position: relative;
 
 	select {
 		appearance: none;
@@ -32,23 +33,20 @@ textarea {
 		border: 0;
 		box-shadow: none;
 		position: relative;
-		text-indent: 0.01px;
+		text-indent: .01px;
 		text-overflow: '';
 		z-index: 2;
 	}
 }
 
-// Elements with actions need pointers
 label,
 input[type='submit'],
 button {
 	cursor: pointer;
 }
 
-// Search Inputs
 input[type='search'] {
 	appearance: none;
-	-webkit-appearance: none;
 
 	&::-webkit-search-decoration,
 	&::-webkit-search-cancel-button,
@@ -58,7 +56,6 @@ input[type='search'] {
 	}
 }
 
-// Remove -webkit styles from text inputs
 input[type='text'],
 input[type='email'],
 input[type='tel'],
@@ -76,7 +73,6 @@ textarea {
 	appearance: none;
 }
 
-// Inputs within a label
 label input,
 label textarea,
 label select {
@@ -85,17 +81,16 @@ label select {
 
 textarea {
 	height: $vr*30;
-	white-space: normal;
 	overflow: auto;
 	padding: $input-padding-y-smallscreen $input-padding-x-smallscreen;
+	white-space: normal;
 
 	@media (min-width: $break-point-d) {
-		padding: $input-padding-y*2 $input-padding-x;
 		height: $vr*30;
+		padding: $input-padding-y*2 $input-padding-x;
 	}
 }
 
-// selects
 .select-replace {
 	display: block;
 	padding: 0;
@@ -107,13 +102,12 @@ textarea {
 		border: 0;
 		box-shadow: none;
 		position: relative;
-		text-indent: 0.01px;
+		text-indent: .01px;
 		text-overflow: '';
 		z-index: 2;
 	}
 }
 
-// radios and checkboxes
 input[type='radio'],
 input[type='checkbox'] {
 	@include size(auto);
@@ -131,12 +125,12 @@ input[type='checkbox'] {
 
 .radio,
 .checkbox {
-	font-size: 12px;
 	display: block;
+	font-size: 12px;
 	line-height: $vr*3;
 	margin-bottom: $vr;
-	padding-top: $vr*2;
 	padding-left: 25px;
+	padding-top: $vr*2;
 	position: relative;
 
 	@media(min-width: $break-point-e) {
@@ -162,9 +156,9 @@ input[type='checkbox'] {
 
 	.checkbox-replace,
 	.radio-replace {
+		left: 0;
 		position: absolute;
 		top: 7px;
-		left: 0;
 	}
 
 	&.radio-style-a,
@@ -173,8 +167,8 @@ input[type='checkbox'] {
 		font-size: 14px;
 		font-weight: $font-weight-medium;
 		line-height: normal;
-		margin-top: 0;
 		margin-bottom: 0;
+		margin-top: 0;
 		padding: $vr*2 5px $vr*2 35px;
 		width: 100%;
 
@@ -191,20 +185,21 @@ input[type='checkbox'] {
 
 		&.checked {
 			background-color: #FFF;
-			box-shadow: inset 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+			box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, .3);
 		}
 	}
 }
 
 .no-js {
+
 	.radio,
 	.checkbox {
 		padding-left: 0;
 
 		input {
 			box-shadow: none;
-			padding: 0;
 			display: inline-block;
+			padding: 0;
 			width: auto;
 		}
 	}
@@ -226,9 +221,9 @@ input[type='checkbox'] {
 	display: inline-block;
 	line-height: normal;
 	margin: 0;
+	outline: 0;
 	padding: 0;
 	position: relative;
-	outline: 0;
 	transition: none;
 	vertical-align: top;
 
@@ -255,7 +250,8 @@ input[type='checkbox'] {
 		}
 	}
 
-	input[disabled] +  & {
+	input[disabled] + & {
+
 		&:hover,
 		&:focus {
 			border-color: $brand-color-f;
@@ -266,27 +262,25 @@ input[type='checkbox'] {
 .checkbox-replace {
 	border-radius: 2px;
 
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		line-height: 100%;
-		text-align: center;
-		font-size: 16px;
-		content: "\2714"; // a tick
-		//hide to begin with
+	&::after {
+		@include size(100%);
+
+		content: '\2714'; // a tick
 		display: none;
+		font-size: 16px;
+		left: 0;
+		line-height: 100%;
+		position: absolute;
+		text-align: center;
+		top: 0;
 	}
 
 	input:checked + & {
-		color: #fff;
 		background: $brand-color-b;
 		border-color: $brand-color-b;
+		color: #FFF;
 
-		&:after {
+		&::after {
 			display: block;
 		}
 	}
@@ -295,54 +289,63 @@ input[type='checkbox'] {
 .radio-replace {
 	border-radius: 100%;
 
-	&:after {
+	&::after {
+		@include size(0);
+
+		border-radius: 100%;
 		content: '';
+		left: 7px;
 		position: absolute;
 		top: 7px;
-		left: 7px;
-		width: 0;
-		height: 0;
-		border-radius: 100%;
 		transition: all 100ms;
 	}
 
 	input:checked + & {
-		&:after {
-			width: 12px;
-			height: 12px;
-			top: 2px;
+
+		&::after {
+			@include size(12px);
+
 			left: 2px;
+			top: 2px;
 		}
 	}
 }
 
-
 // Input size variations
+
 @media (min-width: $break-point-d) {
+
 	.input-mini {
 		width: ($gcw*1) + ($ggw*1);
 	}
+
 	.input-small {
 		width: ($gcw*2) + ($ggw*1);
 	}
+
 	.input-medium {
 		width: ($gcw*3) + ($ggw*2);
 	}
+
 	.input-large {
 		width: ($gcw*4) + ($ggw*3);
 	}
+
 	.input-xlarge {
 		width: ($gcw*5) + ($ggw*4);
 	}
+
 	.input-xxlarge {
 		width: ($gcw*6) + ($ggw*5);
 	}
+
 	.input-xxxlarge {
 		width: ($gcw*7) + ($ggw*6);
 	}
+
 	.input-xxxxlarge {
-		width: ($gcw*8) + ($ggw*7);
 		max-width: 90%;
+		width: ($gcw*8) + ($ggw*7);
 	}
 }
 
@@ -354,15 +357,14 @@ input[type='checkbox'] {
 	}
 }
 
-// Reset the file input to browser defaults
 input[type='file'] {
-	width: auto;
-	padding: initial;
-	line-height: initial;
 	background-color: initial;
 	border: initial;
 	box-shadow: none;
 	cursor: pointer;
+	line-height: initial;
+	padding: initial;
+	width: auto;
 }
 
 .form-actions {

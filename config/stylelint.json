@@ -35,7 +35,6 @@
     "media-query-parentheses-space-inside": "never",
     "at-rule-no-vendor-prefix": true,
     "comment-whitespace-inside": "always",
-    "indentation": 2,
     "max-line-length": 80,
     "max-empty-lines": 2,
     "no-eol-whitespace": true

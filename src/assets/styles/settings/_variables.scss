@@ -29,7 +29,7 @@ $vr: $vertical-rhythm; // Alias
 // Typography
 $font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-serif: 'Georgia Pro', Georgia, Times, serif;
-$font-family-mono: 'Anonymous Pro', 'Droid Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, 'Lucida Console', Courier, monospace;
+$font-family-mono: 'Anonymous Pro', 'Droid Sans Mono', Courier, monospace;
 $font-family-base: $font-family-sans-serif;
 
 $icon-prefix: 'icon';
@@ -131,10 +131,10 @@ $break-point-g-em: #{$break-point-g-em-val}em;
 $break-point-g: $break-point-g-em;
 
 // For break point shorthands
-$BPA: "(min-width:" $break-point-a")";
-$BPB: "(min-width:" $break-point-b")";
-$BPC: "(min-width:" $break-point-c")";
-$BPD: "(min-width:" $break-point-d")";
-$BPE: "(min-width:" $break-point-e")";
-$BPF: "(min-width:" $break-point-f")";
-$BPG: "(min-width:" $break-point-g")";
+$BPA: '(min-width:' $break-point-a')';
+$BPB: '(min-width:' $break-point-b')';
+$BPC: '(min-width:' $break-point-c')';
+$BPD: '(min-width:' $break-point-d')';
+$BPE: '(min-width:' $break-point-e')';
+$BPF: '(min-width:' $break-point-f')';
+$BPG: '(min-width:' $break-point-g')';

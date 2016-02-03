@@ -1,14 +1,25 @@
 // @todo sass docs
 // @todo refactor file
+
 @mixin placeholder($color) {
-	:-moz-placeholder            { color: $color; } // Firefox 4-18
-	::-moz-placeholder           { color: $color; } // Firefox 19+
-	:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
-	::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+
+	:-moz-placeholder {
+		color: $color;
+	}
+
+	::-moz-placeholder {
+		color: $color;
+	}
+
+	:-ms-input-placeholder {
+		color: $color;
+	}
+
+	::-webkit-input-placeholder {
+		color: $color;
+	}
 }
 
-// Fluid Widths
-// calculates a "fluid" (percentage) width (Ethan Marcotte: target / context = result method: http://alistapart.com/article/fluidgrids)
 @mixin fluid-width($target, $context) {
 	width: 100%*($target/$context);
 }
@@ -39,19 +50,22 @@
 
 
 // For clearing floats // @todo should be placeholder
+
 @mixin clearfix() {
-	&:before,
-	&:after {
+
+	&::before,
+	&::after {
+		content: '';
 		display: table;
-		content: "";
 	}
 
-	&:after {
+	&::after {
 		clear: both;
 	}
 }
 
- // @todo should be placeholder
+// @todo should be placeholder
+
 @mixin visually-hidden() {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -73,54 +87,41 @@
 	}
 }
 
-// Form input appearance // @todo probably dont need this
-@mixin appearance($appearance){
-	-webkit-appearance: $appearance;
-	   -moz-appearance: $appearance;
-	    -ms-appearance: $appearance;
-		 -o-appearance: $appearance;
-			appearance: $appearance;
-}
+// Generic size mixin
 
-// Generic block size mixin
 @mixin size($width, $height: $width) {
 	height: $height;
 	width: $width;
 }
 
 // @TODO should be placeholders
+
 @mixin vertically-centered() {
-	.csstransforms & {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 @mixin horizontally-centered() {
-	.csstransforms & {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
 }
 
 @mixin totally-centered() {
-	.csstransforms & {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 
 // //////////////////
 // should be a placeholder, refactor into own file
-//
+
 @mixin reset-button() {
 	background: none;
 	border: 0;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }

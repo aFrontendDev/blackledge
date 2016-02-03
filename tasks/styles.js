@@ -12,15 +12,11 @@ import autoprefixer from 'autoprefixer'
 import mqPacker from 'css-mqpacker'
 import cssNano from 'cssnano'
 
-import rename from 'gulp-rename'
-
 import stylelint from 'stylelint'
 import reporter from 'postcss-reporter'
 import scss from 'postcss-scss'
 
 module.exports = function (gulp, config, argv) {
-  const filename = (argv.prod) ? 'main.min.css' : 'main.css'
-
   function getPostCssPlugins () {
     const plugins = [
       autoprefixer({
@@ -40,18 +36,17 @@ module.exports = function (gulp, config, argv) {
   }
 
   gulp.task('styles', () => {
-    return gulp.src(config.paths.source.styles + 'danielfurze.scss')
+    return gulp.src(config.paths.source.styles + '/component-framework.scss')
       .pipe(sass())
       .pipe(uncss({
         html: [config.paths.dist.base + '/**/*.html']
       }))
       .pipe(postcss(getPostCssPlugins()))
-      .pipe(rename(filename))
       .pipe(gulp.dest(config.paths.dist.styles))
   })
 
   gulp.task('stylelint', () => {
-    return gulp.src(config.paths.source.styles + '**/*.scss')
+    return gulp.src(config.paths.source.styles + '/**/*.scss')
       .pipe(postcss([
         stylelint(config.stylelint),
         reporter({

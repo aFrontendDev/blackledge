@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+	{{!-- {{#block "master-head"}}
+	{{>head-meta}}
+	{{>head-icons}}
+	{{>head-css}}
+	{{>head-scripts}}
+	{{/block}} --}}
+</head>
+<body class="body{{!-- {{#if visibleGrid}} visible-grid{{/if}}{{#if visibleBreakpoints}} visible-breakpoints{{/if}} --}}">
+	{{!-- {{#if showHeader}}
+	{{>header}}
+	{{/if}} --}}
+	<div id="page" class="page{{!-- {{#if pageClass}} {{pageClass}}{{/if}} --}}">
+		<main class="main" id="main" role="main">
+			{{!-- {{#if "sections-top"}}
+			{{#block "sections-top"}}{{/block}}
+			{{/if}} --}}
+			{{!-- {{#if "region-a"}} --}}
+			<div class="layout layout-a">
+			{{#block "main"}}
+<main>
+  {{{contents}}}
+</main>
+{{/block}}
+
+				{{!-- {{body}} --}}
+				{{!-- {{#if "region-a"}} --}}
+				<div class="region region-a">
+					<div class="region-inner">
+						{{!-- {{#block "region-a"}}{{/block}} --}}
+					</div>
+				</div>
+				{{!-- {{/if}} --}}
+			</div>
+			{{!-- {{/if}}
+			{{#if "sections-bottom"}}
+			{{#block "sections-bottom"}}{{/block}}
+			{{/if}} --}}
+		</main>
+		{{!-- {{#if "features-bottom"}}
+		{{#block "features-bottom"}}{{/block}}
+		{{/if}} --}}
+	</div>
+	{{!-- {{#if visibleGrid}}
+	{{>grid}}
+	{{/if}}
+	{{#block "master-foot"}}
+	{{>foot-scripts}}
+	{{/block}} --}}
+</body>
+</html>
+

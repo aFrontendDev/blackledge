@@ -83,33 +83,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Local server
-    connect: {
-      server: {
-        options: {
-          useAvailablePort: true,
-          // change this to '0.0.0.0' to access the server from outside
-          hostname: 'localhost',
-          open: true,
-          base: '<%= config.dist %>'
-        }
-      }
-    },
-
-    // Documentation tasks
-    jsdoc: {
-      all: {
-        src: [
-          'Gruntfile.js',
-          '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/modules/*.js'
-        ],
-        options: {
-          destination: '<%= config.dist %>/<%= config.distDocs %>/<%= config.distJsDocs %>',
-          configure: '.jsdoc.conf.json'
-        }
-      }
-    },
-
     // HTML tasks
     assemble: {
       options: {
@@ -194,87 +167,6 @@ module.exports = function (grunt) {
           '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcScripts %>/<%= config.srcPlugins %>/validation/*.js'
         ],
         dest: '<%= config.dist %>/<%= config.distScripts %>/validation.js'
-      }
-    },
-
-    uglify: {
-      options: {
-        preserveComments: 'some',
-        mangle: true,
-        compress: {
-          drop_console: true
-        }
-      },
-      jquery: {
-        src: '<%= config.dist %>/<%= config.distScripts %>/jquery.js',
-        dest: '<%= config.dist %>/<%= config.distScripts %>/jquery.js'
-      },
-      scripts: {
-        src: '<%= config.dist %>/<%= config.distScripts %>/scripts.js',
-        dest: '<%= config.dist %>/<%= config.distScripts %>/scripts.js'
-      }
-    },
-
-    // Style tasks
-    sass: {
-      main: {
-        options: {
-          style: 'expanded'
-        },
-        files: {
-          '<%= config.dist %>/<%= config.distAssets %>/<%= config.distStyles %>/<%= config.mainCss %>': '<%= config.src %>/<%= config.srcAssets %>/<%= config.srcStyles %>/<%= config.mainSass %>'
-        }
-      }
-    },
-
-    px_to_rem: {
-      main: {
-        options: {
-          base: 16,
-          fallback: false,
-          fallback_existing_rem: false,
-          ignore: []
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>',
-          dest: '<%= config.dist %>/<%= config.distStyles %>/'
-        }]
-      }
-    },
-
-    autoprefixer: {
-      options: {
-        browsers: [
-          'last 2 version'
-        ]
-      },
-      main: {
-        expand: true,
-        flatten: true,
-        src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>',
-        dest: '<%= config.dist %>/<%= config.distStyles %>/'
-      }
-    },
-
-    combine_mq: {
-      main: {
-        expand: true,
-        flatten: true,
-        src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>',
-        dest: '<%= config.dist %>/<%= config.distStyles %>/'
-      }
-    },
-
-    cssmin: {
-      options: {
-        advanced: false,
-        rebase: false
-      },
-      main: {
-        src: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>',
-        dest: '<%= config.dist %>/<%= config.distStyles %>/<%= config.mainCss %>'
       }
     }
   })

@@ -31,7 +31,6 @@ button::-moz-focus-inner {
 	transition: background 250ms, border-color 250ms;
 	vertical-align: top;
 	white-space: nowrap;
-	-webkit-font-smoothing: antialiased; // get rid of faux bolding
 
 	@media (min-width: $break-point-d) {
 		font-size: $font-size-base;
@@ -91,7 +90,9 @@ button::-moz-focus-inner {
 	}
 }
 
-// themes
+// Themes
+// @todo create a mixin for these
+
 .btn-style-a {
 	background-color: $brand-color-a;
 	border-color: $brand-color-a;

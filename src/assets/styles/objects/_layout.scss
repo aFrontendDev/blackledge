@@ -18,9 +18,10 @@
 }
 
 .region {
+
 	@media (min-width: $break-point-d) {
-		position: relative;
 		float: left;
+		position: relative;
 	}
 }
 
@@ -59,6 +60,7 @@
 }
 
 @mixin region-blocks($region-outer-width:0, $region-inner-width:0) {
+
 	.block-single {
 		@media (min-width: $break-point-d) {
 			@include fluid-width($gcw*1, $region-inner-width);
@@ -116,7 +118,6 @@
 	@include region-blocks($region-a-width, $region-a-inner-width);
 }
 
-// show the grid
 .visible-grid {
 
 	.block {

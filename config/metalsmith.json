@@ -2,7 +2,7 @@
   "plugins": {
     "metalsmith-in-place": {
       "engine": "handlebars",
-      "partials": "./source/partials"
+      "partials": "./src/partials"
     }
   }
 }

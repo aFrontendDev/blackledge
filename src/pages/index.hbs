@@ -11,9 +11,34 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
 	<link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
-	<link rel="stylesheet" href="{{{assets}}}/_base/style.css" />
+	<link rel="stylesheet" href="./_base/style.css" />
 </head>
 <body>
-	{{>body}}
+	<div class="container">
+		<header class="header" role="banner">
+			<figure class="logo">
+				<img src="./_base/logo.png" alt="{{{package.name}}}" />
+			</figure>
+			<h1 class="project-title">
+				{{{package.name}}} {{{package.version}}}
+				<span class="last-modified">
+					<b>Last Modified:</b> <span>{{{timestamp}}}</span>
+				</span>
+			</h1>
+		</header>
+		<div class="main" id="main" role="main">
+			<h2>Components</h2>
+			<ul class="file-list">
+				{{!-- {{#withSort pages "filename"}}
+				{{#unless data.hide}}
+				<li class="file">
+					<a href="{{relative dest this.dest}}">{{{filename}}}</a>
+				</li>
+				{{/unless}}
+				{{/withSort}} --}}
+			</ul>
+		</div>
+	</div>
+
 </body>
 </html>
