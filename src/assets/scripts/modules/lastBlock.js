@@ -2,7 +2,7 @@
  * @file Last Block
  * @author {@link http://building-blocks.com Building Blocks}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Last block in a row.

@@ -2,7 +2,7 @@
  * @file Monitor Media Queries
  * @author {@link http://building-blocks.com Building Blocks}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Monitor media queries related methods.

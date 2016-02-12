@@ -2,7 +2,7 @@
  * @file Checkbox replace
  * @author {@link http://andyblackledge.co.uk Andy Blackledge}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Checkbox replace related methods.

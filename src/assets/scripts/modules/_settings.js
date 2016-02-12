@@ -2,7 +2,7 @@
  * @file Settings
  * @author {@link http://building-blocks.com Building Blocks}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     settings: {
       // cache some common variables

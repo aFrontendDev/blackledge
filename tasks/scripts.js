@@ -16,8 +16,8 @@ import jsdoc from 'gulp-jsdoc'
 module.exports = function (gulp, config, argv) {
   gulp.task('scripts', () => {
     return gulp.src([
-      config.paths.source.scripts + '/modules/**/*.js',
-      config.paths.source.scripts + '/_init.js'
+      config.paths.source.scripts + '/_init.js',
+      config.paths.source.scripts + '/modules/**/*.js'
     ])
       .pipe(standard())
       .pipe(concat('scripts.js'))

@@ -3,7 +3,7 @@
  * @author {@link http://danielfurze.co.uk Daniel Furze}
  * @author {@link http://andyblackledge.co.uk Andy Blackledge}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Lock scroll related methods.

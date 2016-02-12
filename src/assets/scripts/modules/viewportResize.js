@@ -2,7 +2,7 @@
  * @file Viewport Resize
  * @author {@link http://building-blocks.com Building Blocks}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Reusable site resize function.

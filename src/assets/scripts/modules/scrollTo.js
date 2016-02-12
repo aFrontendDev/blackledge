@@ -2,7 +2,7 @@
  * @file scrollTo
  * @author {@link http://andyblackledge.co.uk Andy Blackledge}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Scroll to element based on querystring id

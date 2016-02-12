@@ -1,12 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
 <head>
-	{{!-- {{#block "master-head"}}
-	{{>head-meta}}
-	{{>head-icons}}
-	{{>head-css}}
-	{{>head-scripts}}
-	{{/block}} --}}
+	<meta charset="utf-8" />
+	<meta http-equiv="cleartype" content="on" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>{{{title}}}</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+	<link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="stylesheet" media="screen" href="_styles/component-framework.css" />
+	<script src="_scripts/modernizr.js"></script>
+	<script src="_scripts/modernizr.tests.js"></script>
+
 </head>
 <body class="body{{!-- {{#if visibleGrid}} visible-grid{{/if}}{{#if visibleBreakpoints}} visible-breakpoints{{/if}} --}}">
 	{{!-- {{#if showHeader}}
@@ -20,10 +28,10 @@
 			{{!-- {{#if "region-a"}} --}}
 			<div class="layout layout-a">
 			{{#block "main"}}
-<main>
-  {{{contents}}}
-</main>
-{{/block}}
+				<main>
+				  {{{contents}}}
+				</main>
+			{{/block}}
 
 				{{!-- {{body}} --}}
 				{{!-- {{#if "region-a"}} --}}
@@ -43,12 +51,12 @@
 		{{#block "features-bottom"}}{{/block}}
 		{{/if}} --}}
 	</div>
-	{{!-- {{#if visibleGrid}}
-	{{>grid}}
-	{{/if}}
-	{{#block "master-foot"}}
-	{{>foot-scripts}}
-	{{/block}} --}}
+	{{!--<script src="_scripts/jquery.js"></script>--}}
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	{{!-- @todo: CDNify / Wiredep or something --}}
+	{{!--<script src="{{{assets}}}/{{{scripts}}}/validation.js"></script>--}}
+	<script src="_scripts/scripts.js"></script>
+
 </body>
 </html>
 

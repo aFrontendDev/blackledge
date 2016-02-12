@@ -2,7 +2,7 @@
  * @file Events
  * @author {@link http://building-blocks.com Building Blocks}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   /**
    * Publish events using Pub/Sub
    * @namespace events

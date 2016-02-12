@@ -24,6 +24,11 @@ module.exports = function (gulp, config) {
       .pipe(gulp.dest(config.paths.dist.base))
   })
 
+  gulp.task('copy:scripts', () => {
+    return gulp.src([config.paths.source.scripts + '/plugins/*.js'])
+      .pipe(gulp.dest(config.paths.dist.scripts))
+  })
+
   gulp.task('copy:temp', () => {
     return gulp.src([
       config.paths.source.temp + '**/*'
@@ -36,10 +41,5 @@ module.exports = function (gulp, config) {
       config.paths.source.video + '**/*'
     ])
       .pipe(gulp.dest(config.paths.dist.video))
-  })
-
-  gulp.task('copy:scripts', () => {
-    return gulp.src([config.paths.source.scripts + '/plugins/*.js'])
-      .pipe(gulp.dest(config.paths.dist.scripts))
   })
 }

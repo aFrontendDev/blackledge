@@ -2,7 +2,7 @@
  * @file Select replace
  * @author {@link http://andyblackledge.co.uk Andy Blackledge}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Select replace related methods.

@@ -2,7 +2,7 @@
  * @file Utilities
  * @author {@link http://building-blocks.com Building Blocks}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Returns a query string parameter’s value if specified, object of query string parameters if not.

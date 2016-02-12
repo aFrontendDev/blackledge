@@ -2,7 +2,7 @@
  * @file Menu module
  * @author {@link http://danielfurze.co.uk Daniel Furze}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     /**
      * Menu related methods.

@@ -2,7 +2,7 @@
  * @file Page classes
  * @author {@link http://building-blocks.com Building Blocks}
  */
-var bb = bb ? bb : {}(function ($) {
+;(function ($) {
   $.extend(bb, {
     pageReadyClass: function () {
       var self = this

@@ -65,6 +65,7 @@ gulp.task('copy:assets', callback => {
     'copy:base',
     'copy:fonts',
     'copy:images',
+    'copy:scripts',
     'copy:temp',
     'copy:video',
     callback
