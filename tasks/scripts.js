@@ -9,7 +9,6 @@ import gulpif from 'gulp-if'
 import standard from 'gulp-standard'
 import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
-import rename from 'gulp-rename'
 
 import jsdoc from 'gulp-jsdoc'
 
@@ -22,16 +21,13 @@ module.exports = function (gulp, config, argv) {
       .pipe(standard())
       .pipe(concat('scripts.js'))
       .pipe(gulpif(argv.prod, uglify()))
-      .pipe(gulpif(argv.prod, rename({
-        extname: '.min.js'
-      })))
       .pipe(gulp.dest(config.paths.dist.scripts))
   })
 
   gulp.task('jsdocs', () => {
     return gulp.src([
-      config.paths.source.scripts + '/modules/**/*.js',
-      config.paths.source.scripts + '/_init.js'
+      config.paths.source.scripts + '/_init.js',
+      config.paths.source.scripts + '/modules/**/*.js'
     ])
       .pipe(jsdoc(config.paths.dist.docs.jsdocs))
   })

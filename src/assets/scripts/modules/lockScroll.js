@@ -3,6 +3,37 @@
  * @author {@link http://danielfurze.co.uk Daniel Furze}
  * @author {@link http://andyblackledge.co.uk Andy Blackledge}
  */
+
+module.exports = function ($, undefined) {
+  var BUTTON_WRAPPER_SELECTOR = '[data-equal-height]'
+  var height = 0
+
+  function init () {
+    var timeout = setTimeout(function () {
+      setEqualHeights()
+
+      clearTimeout(timeout)
+    }, 1000)
+  }
+
+  function setEqualHeights () {
+    $(BUTTON_WRAPPER_SELECTOR).each(function () {
+      var $wrapper = $(this)
+
+      if ($wrapper.height() > height) {
+        height = $wrapper.height()
+      }
+    })
+
+    $(BUTTON_WRAPPER_SELECTOR).height(height)
+  }
+
+  return {
+    init: init
+  }
+
+}(jQuery)
+
 ;(function ($) {
   $.extend(bb, {
     /**
