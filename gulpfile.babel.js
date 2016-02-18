@@ -110,7 +110,7 @@ gulp.task('default', callback => {
     'clean',
     'copy:assets',
     'metalsmith',
-    ['copy:images', 'styles', 'scripts'],
+    ['copy:images', 'styles', 'scripts:main', 'scripts:plugins'],
     'htmlmin',
     callback
   )

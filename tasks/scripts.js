@@ -13,10 +13,21 @@ import uglify from 'gulp-uglify'
 import jsdoc from 'gulp-jsdoc'
 
 module.exports = function (gulp, config, argv) {
-  gulp.task('scripts', () => {
+  gulp.task('scripts:main', () => {
     return gulp.src([
       config.paths.source.scripts + '/_init.js',
-      config.paths.source.scripts + '/modules/**/*.js'
+      config.paths.source.scripts + '/modules/**/*.js',
+      config.paths.source.scripts + '/components/**/*.js'
+    ])
+      .pipe(standard())
+      .pipe(concat('scripts.js'))
+      .pipe(gulpif(argv.prod, uglify()))
+      .pipe(gulp.dest(config.paths.dist.scripts))
+  })
+
+  gulp.task('scripts:plugins', () => {
+    return gulp.src([
+      config.paths.source.scripts + '/plugins/**/*.js'
     ])
       .pipe(standard())
       .pipe(concat('scripts.js'))
